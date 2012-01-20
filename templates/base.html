@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/media/css/bundle.css" type="text/css" />
+    <script type="text/javascript" src="/media/js/MathJax/MathJax.js?config=default.js"></script>
+    <script type="text/javascript" src="/media/js/jquery-1.6.4.min.js"></script>
+  </head>
+  <body>
+    <div id="header">
+      {% block header %}{% endblock %}
+    </div>
+    <div id="navigation">
+      {% block navigation %}{% endblock %}
+    </div>
+    <div id="sidebar">
+      {% block sidebar %}{% endblock %}
+    </div>
+    <div id="mainContent">
+      {% block mainContent %}{% endblock %}
+    </div>
+    <div id="footer">
+      {% block footer %}{% endblock %}
+    </div>
+  </body>
+</html>
