@@ -5,9 +5,13 @@
 {% endblock %}
 
 {% block mainContent %}
+
   {% for blog in blogs.object_list %}
     {% include 'post.html' with post=blog %}
   {% endfor %}
+
+  {% include 'pagination.html' with blogs=blogs %}
+
 {% endblock %}
 
 {% block footer %}
