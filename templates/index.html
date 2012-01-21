@@ -5,7 +5,9 @@
 {% endblock %}
 
 {% block mainContent %}
-  <p>This is the main content</p>
+  {% for blog in blogs.object_list %}
+    {% include 'post.html' with post=blog %}
+  {% endfor %}
 {% endblock %}
 
 {% block footer %}

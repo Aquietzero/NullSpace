@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from django.template.defaultfilters import slugify
 #from django.contrib.admin.views.decorator import staff_member_required
 
+"""
 def add_blog(request):
     if request.POST:
         title = request.POST['title']
@@ -17,3 +18,4 @@ def add_blog(request):
 
     else:
         render_to_response('admin/blogs/change_form.html')
+        """
