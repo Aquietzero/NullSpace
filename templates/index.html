@@ -1,4 +1,4 @@
-{% extends 'footer.html' %}
+{% extends 'frame.html' %}
 
 {% block title %}
   NullSpace
@@ -6,4 +6,8 @@
 
 {% block mainContent %}
   <p>This is the main content</p>
+{% endblock %}
+
+{% block footer %}
+  {% include 'footer.html' %}
 {% endblock %}
