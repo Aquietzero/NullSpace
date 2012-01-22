@@ -79,15 +79,6 @@ def archieveForIndex(blog_list):
     for blog in blog_list:
         archieve[blog.created.year][blog.created.month].append(blog)
 
-    """
-    return [ {'year' : [ 
-                {'month':[ 
-                    blog for blog in archieve[year][month] 
-                ]} for month in archieve[year] 
-             ]} for year in archieve 
-           ] 
-    """
-
     return [ {'year'   : year,
               'months' : [ {'month':month, 
                             'size':len(archieve[year][month]) 
