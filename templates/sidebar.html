@@ -4,6 +4,9 @@
 
 <div id="categories">
   <p>categories here</p>
+  {% for category in categories %}
+    <ul>{{ category.name }}</ul>
+  {% endfor %}
 </div>
 
 <div id="tags">

@@ -4,6 +4,10 @@
   NullSpace
 {% endblock %}
 
+{% block sidebar %}
+  {% include 'sidebar.html' with category=category %}
+{% endblock %}
+
 {% block mainContent %}
 
   {% for blog in blogs.object_list %}

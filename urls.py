@@ -1,6 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
 from NullSpace import settings
-from NullSpace.blogs.admin_views import *
 from NullSpace.blogs.views import *
 
 # Uncomment the next two lines to enable the admin:

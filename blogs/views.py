@@ -4,7 +4,9 @@ from django.core.paginator import *
 from NullSpace.blogs.models import *
 
 def index(request):
-    blog_list = Blog.objects.all()
+    blog_list = Blog.objects.order_by('created')
+
+    # pagination
     paginator = Paginator(blog_list, 5)
     page = request.GET.get('page')
 
@@ -18,4 +20,12 @@ def index(request):
     else:
         blogs = paginator.page(1)
 
-    return render_to_response('index.html', {'blogs':blogs})
+    # categories
+    categories = Category.objects.all()
+
+    # archieve
+
+    return render_to_response('index.html', 
+            { 'blogs'      : blogs,
+              'categories' : categories,
+              })
