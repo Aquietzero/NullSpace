@@ -21,11 +21,31 @@ def index(request):
         blogs = paginator.page(1)
 
     # categories
-    categories = Category.objects.all()
+    category_list = Category.objects.all()
+    categories = []
+    for category in category_list:
+        size = 0
+        for blog in blog_list:
+            if blog.getCategory() == category.name:
+                size += 1
+        categories.append({ 'name' : category.name,
+                            'size' : size })
+
+    # tags
+    tag_list = Tag.objects.all()
+    tags = []
+    for tag in tag_list:
+        size = 0
+        for blog in blog_list:
+            if tag.name in blog.getTags():
+                size += 1
+        tags.append({ 'name' : tag.name,
+                      'size' : size })
 
     # archieve
 
     return render_to_response('index.html', 
             { 'blogs'      : blogs,
               'categories' : categories,
-              })
+              'tags'       : tags,
+            })

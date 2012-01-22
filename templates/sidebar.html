@@ -5,11 +5,15 @@
 <div id="categories">
   <p>categories here</p>
   {% for category in categories %}
-    <ul>{{ category.name }}</ul>
+    <ul>{{ category.name }}({{ category.size }})</ul>
   {% endfor %}
 </div>
 
 <div id="tags">
-  <p>tags here</p>
+  <p>
+    {% for tag in tags %}
+      {{ tag.name }}({{ tag.size }})
+    {% endfor %}
+  </p>
 </div>
 
