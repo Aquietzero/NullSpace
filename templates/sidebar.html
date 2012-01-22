@@ -1,15 +1,22 @@
 <div id="archieves">
-  <p>archieves here</p>
+  <p>Archieve</p>
+  {% for year in archieve %}
+    <ul>{{ year.year }}</ul>
+    {% for month in year.months %}
+      <ul>{{ month.month }}({{ month.size }})</ul>
+    {% endfor %}
+  {% endfor %}
 </div>
 
 <div id="categories">
-  <p>categories here</p>
+  <p>Categories</p>
   {% for category in categories %}
     <ul>{{ category.name }}({{ category.size }})</ul>
   {% endfor %}
 </div>
 
 <div id="tags">
+  <p>Tags</p>
   <p>
     {% for tag in tags %}
       {{ tag.name }}({{ tag.size }})

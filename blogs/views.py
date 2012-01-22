@@ -2,10 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from django.core.paginator import *
 from NullSpace.blogs.models import *
+from datetime import *
 
 def index(request):
 
-    blog_list = Blog.objects.order_by('created')
+    blog_list = Blog.objects.order_by('created').reverse()
 
     # pagination
     paginator = Paginator(blog_list, 5)
@@ -23,13 +24,14 @@ def index(request):
 
     categories = categoriesForIndex(blog_list)
     tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
 
-    # archieve
 
     return render_to_response('index.html', 
             { 'blogs'      : blogs,
               'categories' : categories,
               'tags'       : tags,
+              'archieve'   : archieve,
             })
 
 
@@ -60,3 +62,34 @@ def categoriesForIndex(blog_list):
                             'size' : size })
 
     return categories
+
+
+
+def archieveForIndex(blog_list):
+    thisYear = datetime.now().year
+    blog_list = Blog.objects.order_by('created')
+    oldestYear = blog_list[0].created.year
+
+    archieve = {}
+    for year in range(oldestYear, thisYear+1):
+        archieve[year] = {}
+        for month in range(1, 13):
+            archieve[year][month] = []
+
+    for blog in blog_list:
+        archieve[blog.created.year][blog.created.month].append(blog)
+
+    """
+    return [ {'year' : [ 
+                {'month':[ 
+                    blog for blog in archieve[year][month] 
+                ]} for month in archieve[year] 
+             ]} for year in archieve 
+           ] 
+    """
+
+    return [ {'year'   : year,
+              'months' : [ {'month':month, 
+                            'size':len(archieve[year][month]) 
+                           } for month in archieve[year] if len(archieve[year][month]) != 0 ]
+             } for year in archieve ]
