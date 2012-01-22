@@ -1,22 +1,26 @@
 <div id="archieves">
-  <p>Archieve</p>
+  <h3 class="sidebarTitle">Archieve</h3>
   {% for year in archieve %}
-    <ul>{{ year.year }}</ul>
+  <ul class="archieves">
+    <li class="year">{{ year.year }}</li>
     {% for month in year.months %}
-      <ul>{{ month.month }}({{ month.size }})</ul>
+      <li class="month">{{ month.month }}({{ month.size }})</li>
     {% endfor %}
+  </ul>
   {% endfor %}
 </div>
 
 <div id="categories">
-  <p>Categories</p>
+  <h3 class="sidebarTitle">Categories</h3>
+  <ul class="categories">
   {% for category in categories %}
-    <ul>{{ category.name }}({{ category.size }})</ul>
+    <li class="category">{{ category.name }}({{ category.size }})</li>
   {% endfor %}
+  </ul>
 </div>
 
 <div id="tags">
-  <p>Tags</p>
+  <h3 class="sidebarTitle">Tags</h3>
   <p>
     {% for tag in tags %}
       {{ tag.name }}({{ tag.size }})
