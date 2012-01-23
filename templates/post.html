@@ -14,7 +14,7 @@
     </div>
 
     <div class="postTitle">
-      <h1>{{ post.title }}</h1>
+      <a href="{{ post.slug }}">{{ post.title }}</a>
     </div>
   </div>
   
@@ -23,7 +23,7 @@
   </div>
 
   <div class="postTags">
-    <p>{{ post.tags }}</p>
+    <p>{{ post.tags.all }}</p>
   </div>
 
 </div>

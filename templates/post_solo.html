@@ -1,0 +1,10 @@
+{% extends 'frame.html' %}
+
+{% block title %}
+  {{ blog.title }} 
+{% endblock %}
+
+{% block mainContent %}
+  {% include 'post.html' with post=post %}
+{% endblock %}
+

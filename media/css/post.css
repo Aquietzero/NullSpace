@@ -17,6 +17,14 @@
 .post .postHeading .postTitle {
   float: left;
   width: 80%;
+  padding: 15px 20px;
+}
+.post .postHeading .postTitle a {
+  display: block;
+  font-size: 25pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
 }
 .post .postHeading .postTime {
   float: left;

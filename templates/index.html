@@ -4,10 +4,6 @@
   NullSpace
 {% endblock %}
 
-{% block sidebar %}
-  {% include 'sidebar.html' %}
-{% endblock %}
-
 {% block mainContent %}
 
   {% for blog in blogs.object_list %}
@@ -18,6 +14,3 @@
 
 {% endblock %}
 
-{% block footer %}
-  {% include 'footer.html' %}
-{% endblock %}

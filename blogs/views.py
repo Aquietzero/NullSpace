@@ -84,3 +84,7 @@ def archieveForIndex(blog_list):
                             'size'  : len(archieve[year][month]) 
                            } for month in archieve[year] if len(archieve[year][month]) != 0 ]
              } for year in archieve ]
+
+def post(request, slug):
+    post = Blog.objects.get(slug=slug)
+    return render_to_response('post_solo.html', { 'post':post })
