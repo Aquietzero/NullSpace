@@ -1,30 +1,37 @@
-<div id="archieves">
-  <h3 class="sidebarTitle">Archieve</h3>
-  {% for year in archieve %}
-  <ul class="archieves">
-    <li class="year">{{ year.year }}</li>
-    {% for month in year.months %}
+<div id="sidebarContent">
+  <div id="archieves">
+    <h3 class="sidebarTitle">Archieve</h3>
+    {% for year in archieve %}
+    <ul class="archieves">
+      <li class="year">{{ year.year }}</li>
+      {% for month in year.months %}
       <li class="month">{{ month.month }}({{ month.size }})</li>
+      {% endfor %}
+    </ul>
     {% endfor %}
-  </ul>
-  {% endfor %}
-</div>
+  </div>
 
-<div id="categories">
-  <h3 class="sidebarTitle">Categories</h3>
-  <ul class="categories">
-  {% for category in categories %}
-    <li class="category">{{ category.name }}({{ category.size }})</li>
-  {% endfor %}
-  </ul>
-</div>
+  <div id="categories">
+    <h3 class="sidebarTitle">Categories</h3>
+    <ul class="categories">
+      {% for category in categories %}
+      <li class="category">{{ category.name }}({{ category.size }})</li>
+      {% endfor %}
+    </ul>
+  </div>
 
-<div id="tags">
-  <h3 class="sidebarTitle">Tags</h3>
-  <p>
-    {% for tag in tags %}
+  <!--
+  <div id="tags">
+    <h3 class="sidebarTitle">Tags</h3>
+    <p>
+      {% for tag in tags %}
       {{ tag.name }}({{ tag.size }})
-    {% endfor %}
-  </p>
+      {% endfor %}
+    </p>
+  </div>
+  -->
 </div>
 
+<div id="sidebarButton">
+  <p>&lsaquo;&lsaquo;</p>
+</div>

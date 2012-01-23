@@ -1,36 +1,33 @@
 .codehilitetable {
-  border-collapse: collapse;
-  border: none;
-  margin: 10px auto;
-  padding: 10px;
-  width: 95%;
-}
-.codehilitetable .code {
-  background-color: #eee;
-  border-top: solid 1px #bbb;
-  border-bottom: solid 1px #bbb;
-  margin: 10px auto;
-  padding-left: 20px;
-}
-.codehilitetable .linenos {
-  width: 35px;
-  background: -moz-linear-gradient(left, #ccc, #aaa);
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 0 1px 1px #666;
-  border-top: solid 1px #bbb;
-  border-bottom: solid 1px #bbb;
-  text-align: center;
-}
-blockquote {
-  border-left: solid 5px #ddd;
-  padding: 5px 15px;
-  font-style: italic;
-}
-blockquote p {
-  margin: 0;
+    border-collapse: collapse;
+    border: none;
 }
 
+.codehilitetable .code {
+    background-color: #333333;
+    width: 700px;
+    margin: 10px auto;
+    padding-left: 30px;
+}
+
+.codehilitetable .linenos {
+    background-color: #111111;
+    color: #666666;
+    padding: 0px 10px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px black;
+    border-right: solid 1px #666666;
+}
+
+blockquote {
+    border-left: solid 5px #DDDDDD;
+    padding: 5px 15px;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
 
 .hll { background-color: #ffffcc }
  { background: #ffffff; }

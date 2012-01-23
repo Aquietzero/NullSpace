@@ -2,14 +2,22 @@
 
 <div class="post">
 
-  <div class="postTitle">
-    <h1>{{ post.title }}</h1>
-  </div>
+  <div class="postHeading">
+    <div class="postTime">
+      <div class="createdYear">{{ post.created|date:'Y' }}</div>
+      <div class="createdMonthWrapper">
+        <div class="createdMonth">{{ post.created|date:'M' }}</div>
+      </div>
+      <div class="createdDayWrapper">
+        <div class="createdDay">{{ post.created|date:'d' }}</div>
+      </div>
+    </div>
 
-  <div class="postTime">
-    <p>{{ post.created }}</p>
+    <div class="postTitle">
+      <h1>{{ post.title }}</h1>
+    </div>
   </div>
-
+  
   <div class="postBody">
     <p>{{ post.body|markdown:'codehilite(force_linenos=True)' }}</p>
   </div>

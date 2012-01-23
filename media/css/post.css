@@ -1,0 +1,60 @@
+.post {
+  margin: 0 auto 30px auto;
+  padding: 50px;
+  background-color: rgba(255,255,255,0.90);
+  -moz-box-shadow: 0 0 5px #000;
+}
+.post .postHeading {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -25px;
+  left: -130px;
+  -moz-box-shadow: 0 0 5px #000;
+  overflow: hidden;
+}
+.post .postHeading .postTitle {
+  float: left;
+  width: 80%;
+}
+.post .postHeading .postTime {
+  float: left;
+  background: transparent;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+}
+.post .postHeading .postTime .createdYear {
+  display: none;
+}
+.post .postHeading .postTime .createdMonthWrapper {
+  background-color: #fff;
+  height: 50%;
+}
+.post .postHeading .postTime .createdMonthWrapper .createdMonth {
+  background-color: #f00;
+  -moz-border-radius-bottomleft: 50px;
+  height: 100%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20pt;
+  font-family: sans-serif;
+}
+.post .postHeading .postTime .createdDayWrapper {
+  background-color: #f00;
+  height: 50%;
+}
+.post .postHeading .postTime .createdDayWrapper .createdDay {
+  background-color: #fff;
+  -moz-border-radius-topright: 50px;
+  height: 100%;
+  color: #f00;
+  font-weight: bold;
+  font-size: 15pt;
+  font-family: sans-serif;
+}
+.post .postBody {
+  position: relative;
+  clear: both;
+}

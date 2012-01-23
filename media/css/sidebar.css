@@ -1,21 +1,29 @@
-#sidebar {
+#sidebarContent {
   margin: 0;
   padding: 0;
   border-right: solid 15px #000;
-  -moz-box-shadow: 0 0 5px #000;
+  -moz-box-shadow: 0 0 5px #000, -1px 0 2px #eee inset;
+  overflow: hidden;
+  float: left;
+  width: 85%;
+  height: 100%;
+  background: -moz-linear-gradient(left, rgba(250,250,250,0.60), #777);
 }
-#sidebar .sidebarTitle {
+#sidebarContent .sidebarTitle {
+  color: #333;
   font-size: 12pt;
   font-weight: bold;
-  text-shadow: 0 1px 1px #ccc;
+  text-shadow: 0 1px 1px #fff;
   margin: 20px auto 0 auto;
   padding: 5px 20px;
   background: -moz-linear-gradient(top, rgba(250,250,250,0.60), rgba(250,250,250,0.20));
   -moz-border-radius-bottomleft: 20px;
   border-bottom: solid 1px rgba(50,50,50,0.70);
 }
-#sidebar .month,
-#sidebar .category {
+#sidebarContent .month,
+#sidebarContent .category {
+  color: #444;
+  font-weight: bold;
   list-style-type: none;
   border-bottom: solid 1px rgba(50,50,50,0.70);
   -moz-border-radius-bottomleft: 50px;
@@ -23,21 +31,42 @@
   background: -moz-linear-gradient(top, rgba(250,250,250,0.60), rgba(250,250,250,0.20));
   padding: 4px 35px;
   margin: 0;
-  text-shadow: 0 1px 1px #ccc;
+  text-shadow: 0 1px 1px #fff;
 }
-#sidebar .year {
+#sidebarContent .month:hover,
+#sidebarContent .category:hover {
+  color: #036;
+  cursor: pointer;
+  background: -moz-linear-gradient(top, rgba(250,250,250,0.50), rgba(250,250,250,0.60));
+}
+#sidebarContent .year {
   font-weight: bold;
   list-style-type: none;
   text-align: right;
+  padding-right: 15px;
   background: -moz-linear-gradient(left, rgba(250,250,250,0.00), rgba(50,50,50,0.30));
 }
-#sidebar .archieves,
-#sidebar .categories {
+#sidebarContent .archieves,
+#sidebarContent .categories {
   margin: 0 auto 10px 20px;
   padding-left: 20px;
   padding-bottom: 20px;
   border-left: solid 1px rgba(100,100,100,0.30);
   -moz-border-radius-bottomleft: 20px;
   -moz-border-radius-topleft: 5px;
-  -moz-box-shadow: 0 5px 5px #666;
+  -moz-box-shadow: -2px 5px 5px #777;
+}
+#sidebarButton {
+  float: left;
+  color: #fff;
+  background-color: #000;
+  height: 50px;
+  width: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-box-shadow: 0 0 5px #000;
+  font-weight: bold;
+}
+#sidebarButton:hover {
+  text-shadow: 0 0 1px #fff;
+  cursor: pointer;
 }

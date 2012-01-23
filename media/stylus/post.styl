@@ -1,0 +1,65 @@
+postPadding = 50px
+postTimeSize = 80px
+
+.post
+  margin 0 auto 30px auto
+  padding postPadding
+  background-color rgba(255, 255, 255, 0.9)
+  -moz-box-shadow 0 0 5px black
+
+  .postHeading
+    width 100%
+    margin 0
+    padding 0
+    position relative
+    top -25px
+    left -(postPadding + postTimeSize)
+    -moz-box-shadow 0 0 5px black
+    overflow hidden
+
+    .postTitle
+      float left
+      width 80%
+
+    .postTime
+      float left
+      //position relative
+      //top -25px
+      //left -(postPadding + postTimeSize)
+      background transparent 
+      width postTimeSize
+      height @width 
+      text-align center
+
+      .createdYear
+        display none
+
+      .createdMonthWrapper
+        background-color white 
+        height 50%
+      
+        .createdMonth
+          background-color red
+          -moz-border-radius-bottomleft 50px
+          height 100%
+          color white
+          font-weight bold
+          font-size 20pt
+          font-family sans-serif
+  
+      .createdDayWrapper
+        background-color red 
+        height 50%
+
+        .createdDay
+          background-color white
+          -moz-border-radius-topright 50px
+          height 100%
+          color red 
+          font-weight bold
+          font-size 15pt
+          font-family sans-serif
+
+  .postBody
+    position relative
+    clear both
