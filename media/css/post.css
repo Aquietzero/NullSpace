@@ -2,22 +2,27 @@
   margin: 0 auto 30px auto;
   padding: 50px;
   background-color: rgba(255,255,255,0.90);
-  -moz-box-shadow: 0 0 5px #000;
+  -moz-box-shadow: 0 0 10px #000;
 }
 .post .postHeading {
-  width: 100%;
+  width: 122%;
   margin: 0;
   padding: 0;
   position: relative;
   top: -25px;
   left: -130px;
-  -moz-box-shadow: 0 0 5px #000;
+  -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.70);
   overflow: hidden;
+  -moz-border-radius-topleft: 15px;
+  -moz-border-radius-bottomleft: 30px;
+  -moz-border-radius-bottomright: 30px;
+  background-color: #f6f6f6;
 }
 .post .postHeading .postTitle {
   float: left;
   width: 80%;
   padding: 15px 20px;
+  text-shadow: 0 1px 2px #999;
 }
 .post .postHeading .postTitle a {
   display: block;
@@ -25,6 +30,9 @@
   font-weight: bold;
   text-decoration: none;
   color: #000;
+}
+.post .postHeading .postTitle a:hover {
+  color: #603;
 }
 .post .postHeading .postTime {
   float: left;
@@ -37,11 +45,13 @@
   display: none;
 }
 .post .postHeading .postTime .createdMonthWrapper {
+  -moz-border-radius-topleft: 15px;
   background-color: #fff;
   height: 50%;
 }
 .post .postHeading .postTime .createdMonthWrapper .createdMonth {
-  background-color: #f00;
+  background-color: #903;
+  -moz-border-radius-topleft: 15px;
   -moz-border-radius-bottomleft: 50px;
   height: 100%;
   color: #fff;
@@ -50,17 +60,18 @@
   font-family: sans-serif;
 }
 .post .postHeading .postTime .createdDayWrapper {
-  background-color: #f00;
+  background-color: #903;
   height: 50%;
 }
 .post .postHeading .postTime .createdDayWrapper .createdDay {
   background-color: #fff;
   -moz-border-radius-topright: 50px;
   height: 100%;
-  color: #f00;
+  color: #903;
   font-weight: bold;
   font-size: 15pt;
   font-family: sans-serif;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.50);
 }
 .post .postBody {
   position: relative;

@@ -5,22 +5,27 @@ postTimeSize = 80px
   margin 0 auto 30px auto
   padding postPadding
   background-color rgba(255, 255, 255, 0.9)
-  -moz-box-shadow 0 0 5px black
+  -moz-box-shadow 0 0 10px black
 
   .postHeading
-    width 100%
+    width 122%
     margin 0
     padding 0
     position relative
     top -25px
     left -(postPadding + postTimeSize)
-    -moz-box-shadow 0 0 5px black
+    -moz-box-shadow -2px 2px 5px rgba(0, 0, 0, 0.7) 
     overflow hidden
+    -moz-border-radius-topleft 15px
+    -moz-border-radius-bottomleft 30px
+    -moz-border-radius-bottomright 30px
+    background-color #F6F6F6 
 
     .postTitle
       float left
       width 80%
       padding 15px 20px
+      text-shadow 0 1px 2px #999999
 
       a
         display block
@@ -28,6 +33,9 @@ postTimeSize = 80px
         font-weight bold
         text-decoration none
         color black
+
+      a:hover
+        color #660033
 
     .postTime
       float left
@@ -43,11 +51,13 @@ postTimeSize = 80px
         display none
 
       .createdMonthWrapper
+        -moz-border-radius-topleft 15px
         background-color white 
         height 50%
       
         .createdMonth
-          background-color red
+          background-color #990033
+          -moz-border-radius-topleft 15px
           -moz-border-radius-bottomleft 50px
           height 100%
           color white
@@ -56,17 +66,18 @@ postTimeSize = 80px
           font-family sans-serif
   
       .createdDayWrapper
-        background-color red 
+        background-color #990033
         height 50%
 
         .createdDay
           background-color white
           -moz-border-radius-topright 50px
           height 100%
-          color red 
+          color #990033 
           font-weight bold
           font-size 15pt
           font-family sans-serif
+          text-shadow 0 1px 1px rgba(0, 0, 0, 0.5)
 
   .postBody
     position relative
