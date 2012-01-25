@@ -5,6 +5,8 @@
 {% endblock %}
 
 {% block mainContent %}
-  {% include 'post.html' with post=post %}
+  {% include 'post.html' %}
+  {% include 'comments.html' %}
+  {% include 'comment.html' %}
 {% endblock %}
 

@@ -1,0 +1,10 @@
+<div class="comments">
+  {% for comment in comments %}
+    {% if comment.approved %}
+      <div class="commentVisitor">{{ comment.visitor }}</div>
+      <div class="commentWebsite">{{ comment.website }}</div>
+      <div class="commentEmail">{{ comment.email }}</div>
+      <div class="commentContent">{{ comment.content }}</div>
+    {% endif %}
+  {% endfor %}
+</div>

@@ -10,7 +10,7 @@
   padding: 0;
   position: relative;
   top: -25px;
-  left: -130px;
+  left: -125px;
   -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.70);
   overflow: hidden;
   -moz-border-radius-topleft: 15px;
@@ -37,8 +37,8 @@
 .post .postHeading .postTime {
   float: left;
   background: transparent;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   text-align: center;
 }
 .post .postHeading .postTime .createdYear {

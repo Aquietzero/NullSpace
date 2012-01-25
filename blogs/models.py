@@ -49,11 +49,12 @@ class Blog(models.Model):
 class Comment(models.Model):
     content = models.TextField()
     email = models.EmailField()
-    gravatar = models.URLField()
+    website = models.URLField()
+    gravatar = models.URLField(blank=True)
     visitor = models.CharField(max_length = 50)
-    created = models.DateField()
+    created = models.DateTimeField()
     approved = models.BooleanField()
     blog = models.ForeignKey(Blog)
 
     def __unicode__(self):
-        return self.visitor + '-' + self.created
+        return self.visitor + '-' + self.created.strftime('%Y-%m-%D %H:%M')

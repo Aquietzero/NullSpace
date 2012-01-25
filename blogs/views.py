@@ -1,7 +1,9 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.core.paginator import *
+from django.views.decorators.csrf import csrf_protect, csrf_exempt
 from NullSpace.blogs.models import *
+from NullSpace.blogs.forms import *
 from datetime import *
 
 def index(request):
@@ -85,6 +87,43 @@ def archieveForIndex(blog_list):
                            } for month in archieve[year] if len(archieve[year][month]) != 0 ]
              } for year in archieve ]
 
+
+@csrf_exempt
 def post(request, slug):
     post = Blog.objects.get(slug=slug)
-    return render_to_response('post_solo.html', { 'post':post })
+    comments = post.comment_set.all()
+    print '------------' + str(post.id) + '-------------------'
+
+    if request.method == 'POST':
+        comment = CommentForm(request.POST)
+        if comment.is_valid():
+            saveComment(comment, post)
+            return HttpResponseRedirect('/index/' + slug)
+        else:
+            return HttpResponseRedirect('/index/' + slug)
+    else:
+        comment = CommentForm(initial={
+              'visitor':'username',
+              'website':'your personal website/blog',
+              'email'  :'your contact e-mail',
+              'content':'something you want to say',
+          })
+
+    return render_to_response('post_solo.html', { 
+        'post'    :post, 
+        'comment' :comment,
+        'comments':comments 
+    })
+
+
+
+def saveComment(comment, post):
+    c = Comment()
+    c.approved = False
+    c.blog = post
+    c.created = datetime.now().strftime('%Y-%m-%d %H:%M')
+    c.visitor = comment.cleaned_data['visitor']
+    c.website = comment.cleaned_data['website']
+    c.email   = comment.cleaned_data['email']
+    c.content = comment.cleaned_data['content']
+    c.save()
