@@ -1,13 +1,17 @@
 <div class="pagination">
-  {% if blogs.has_previous %}
-    <a href="?page={{ blogs.previous_page_number }}">Previous</a>
-  {% endif %}
-
-  <span class="current">
-    <p>Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}</p>
-  </span>
-  
-  {% if blogs.has_next %}
-    <a href="?page={{ blogs.next_page_number }}">Next</a>
-  {% endif %}
+  <div class="current">
+    <p>
+    {% if blogs.has_previous %}
+      <a href="?page={{ blogs.previous_page_number }}">&lsaquo;&lsaquo; Prev</a>
+    {% else %}
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endif %}
+    <span class="pageInfo">Page {{ blogs.number }} of {{ blogs.paginator.num_pages }}</span>
+    {% if blogs.has_next %}
+      <a href="?page={{ blogs.next_page_number }}">Next &rsaquo;&rsaquo;</a>
+    {% else %}
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endif %}
+    </p>
+  </div>
 </div>

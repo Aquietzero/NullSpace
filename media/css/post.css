@@ -3,6 +3,7 @@
   padding: 50px;
   background-color: rgba(255,255,255,0.90);
   -moz-box-shadow: 0 0 10px #000;
+  -moz-border-radius: 10px;
 }
 .post .postHeading {
   width: 122%;
@@ -26,7 +27,7 @@
 }
 .post .postHeading .postTitle a {
   display: block;
-  font-size: 25pt;
+  font-size: 20pt;
   font-weight: bold;
   text-decoration: none;
   color: #000;
@@ -97,12 +98,16 @@
   padding: 0.5px;
   color: #000;
 }
+.post .postBody hr {
+  border: none;
+  border-bottom: solid 0.5px #bbb;
+}
 .post .postBody a {
   text-decoration: none;
   color: #803;
 }
 .post .postBody a:hover {
-  text-shadow: 0 0 1px #803;
+  text-shadow: 0 0 1px rgba(200,0,50,0.80);
 }
 .post .postBody blockquote {
   border-left: solid 7px #cfcfcf;

@@ -6,6 +6,7 @@ postTimeSize = 75px
   padding postPadding
   background-color rgba(255, 255, 255, 0.9)
   -moz-box-shadow 0 0 10px black
+  -moz-border-radius 10px
 
   .postHeading
     width 122%
@@ -29,7 +30,7 @@ postTimeSize = 75px
 
       a
         display block
-        font-size 25pt
+        font-size 20pt
         font-weight bold
         text-decoration none
         color black
@@ -98,11 +99,15 @@ postTimeSize = 75px
       padding 0.5px
       color black
 
+    hr
+      border none
+      border-bottom solid 0.5px #BBBBBB
+
     a
       text-decoration none
       color #880033
       &:hover
-        text-shadow 0 0 1px #880033
+        text-shadow 0 0 1px rgba(200, 0, 50, 0.8)
 
     blockquote
       border-left solid 7px #CFCFCF

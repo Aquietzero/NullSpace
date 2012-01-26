@@ -13,8 +13,7 @@ def index(request):
     # pagination
     paginator = Paginator(blog_list, 5)
     page = request.GET.get('page')
-
-    if page:
+    if page: 
         try:
             blogs = paginator.page(page)
         except PageNotAnInteger:
@@ -100,13 +99,8 @@ def post(request, slug):
         else:
             return HttpResponseRedirect('/index/' + slug)
     else:
-        comment = CommentForm(initial={
-              'visitor':'username',
-              'website':'your personal website/blog',
-              'email'  :'your contact e-mail',
-              'content':'something you want to say',
-          })
-
+        comment = CommentForm()
+         
     return render_to_response('post_solo.html', { 
         'post'    :post, 
         'comment' :comment,

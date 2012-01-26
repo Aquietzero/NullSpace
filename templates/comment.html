@@ -1,6 +1,32 @@
-<div class="comment">
+<div class="leaveCommentButton">
+  <p>Leave Comment</p>
+</div>
+
+<div class="leaveComment">
+  <hr />
+
+  {% include 'comments.html' with comments=post.comment_set.all %}
+
   <form action="/index/{{ post.slug }}" method="post">
-    {{ comment.as_p }}
-    <input type="submit" value="Submit" />
+    <p>
+      <label for="id_visitor">Visitor</label> 
+      <input id="id_visitor" type="text" name="visitor" maxlength="50" />
+    </p>
+    <p>
+      <label for="id_website">Website</label> 
+      <input type="text" name="website" id="id_website" />
+    </p>
+    <p>
+      <label for="id_email">Email</label> 
+      <input type="text" name="email" id="id_email" />
+    </p>
+    <p>
+      <div class="commentField">
+        <textarea id="id_content" rows="10" cols="40" name="content"></textarea>
+        <input type="submit" value="Submit" />
+      </div>
+    </p>
   </form>
 </div>
+
+
