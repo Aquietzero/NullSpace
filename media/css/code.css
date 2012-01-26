@@ -1,34 +1,24 @@
 .codehilitetable {
   border-collapse: collapse;
   border: none;
-  margin: 10px auto;
-  padding: 10px;
-  width: 95%;
+  margin: 5px auto;
+  border: solid 1px #bbb;
 }
 .codehilitetable .code {
-  background-color: #eee;
-  border-top: solid 1px #bbb;
-  border-bottom: solid 1px #bbb;
-  margin: 10px auto;
+  background-color: #efefef;
+  margin: 0;
+  padding: 0;
   padding-left: 20px;
+  width: 100%;
 }
 .codehilitetable .linenos {
-  width: 35px;
-  background: -moz-linear-gradient(left, #ccc, #aaa);
+  margin: 0;
+  padding: 0 10px;
   color: #fff;
+  background-color: #bbb;
   font-weight: bold;
   text-shadow: 0 1px 1px #666;
-  border-top: solid 1px #bbb;
-  border-bottom: solid 1px #bbb;
   text-align: center;
-}
-blockquote {
-  border-left: solid 5px #ddd;
-  padding: 5px 15px;
-  font-style: italic;
-}
-blockquote p {
-  margin: 0;
 }
 
 

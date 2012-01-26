@@ -2,6 +2,7 @@ body {
   background: url("/media/img/body.jpg");
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
 }
 #header {
   width: 100%;

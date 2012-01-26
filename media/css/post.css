@@ -77,3 +77,38 @@
   position: relative;
   clear: both;
 }
+.post .postBody h1,
+.post .postBody h2,
+.post .postBody h3,
+.post .postBody h4 {
+  color: #111;
+  text-shadow: 0 1px 1px #999;
+}
+.post .postBody h5,
+.post .postBody h6,
+.post .postBody p {
+  color: #333;
+}
+.post .postBody code {
+  border: solid 1px #bbb;
+  font-size: 0.8em;
+  background-color: #efefef;
+  -moz-border-radius: 3px;
+  padding: 0.5px;
+  color: #000;
+}
+.post .postBody a {
+  text-decoration: none;
+  color: #803;
+}
+.post .postBody a:hover {
+  text-shadow: 0 0 1px #803;
+}
+.post .postBody blockquote {
+  border-left: solid 7px #cfcfcf;
+  padding-left: 10px;
+}
+.post .postBody blockquote p {
+  font-style: oblique;
+  color: #777;
+}
