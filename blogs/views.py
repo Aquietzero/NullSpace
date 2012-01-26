@@ -91,8 +91,6 @@ def archieveForIndex(blog_list):
 @csrf_exempt
 def post(request, slug):
     post = Blog.objects.get(slug=slug)
-    comments = post.comment_set.all()
-    print '------------' + str(post.id) + '-------------------'
 
     if request.method == 'POST':
         comment = CommentForm(request.POST)
@@ -112,7 +110,6 @@ def post(request, slug):
     return render_to_response('post_solo.html', { 
         'post'    :post, 
         'comment' :comment,
-        'comments':comments 
     })
 
 

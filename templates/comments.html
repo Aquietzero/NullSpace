@@ -1,10 +1,18 @@
 <div class="comments">
   {% for comment in comments %}
     {% if comment.approved %}
-      <div class="commentVisitor">{{ comment.visitor }}</div>
-      <div class="commentWebsite">{{ comment.website }}</div>
-      <div class="commentEmail">{{ comment.email }}</div>
-      <div class="commentContent">{{ comment.content }}</div>
+      <div class="comment">
+        <div class="commentLeft">
+          <div class="commentGravatar">
+            <img src="/media/img/default.png" alt="default" class="gravatar" />
+          </div>
+          <div class="commentVisitor">{{ comment.visitor }}</div>
+        </div>
+        <div class="commentRight">
+          <div class="commentCreated">{{ comment.created }}</div>
+          <div class="commentContent">{{ comment.content }}</div>
+        </div>
+      </div>
     {% endif %}
   {% endfor %}
 </div>

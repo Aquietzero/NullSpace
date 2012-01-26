@@ -27,4 +27,5 @@
     <p>{{ post.tags.all }}</p>
   </div>
 
+  {% include 'comments.html' with comments=post.comment_set.all %}
 </div>

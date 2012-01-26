@@ -1,0 +1,58 @@
+.comments {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.comments .comment {
+  margin: 20px 0;
+  padding: 10px 0;
+  overflow: hidden;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-box-shadow: 0 -3px 3px rgba(50,50,50,0.20);
+  background: -moz-linear-gradient(top, rgba(250,250,250,0.60), rgba(250,250,250,0.00));
+}
+.comments .comment .commentLeft {
+  float: left;
+  width: 15%;
+  color: #333;
+}
+.comments .comment .commentLeft .commentGravatar {
+  margin: 0 auto;
+  padding: 10px;
+  padding-bottom: 0;
+  width: 60px;
+  text-align: center;
+}
+.comments .comment .commentLeft .commentGravatar .gravatar {
+  width: 70%;
+  -moz-box-shadow: 0 0 2px #666;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-topright: 2px;
+  -moz-border-radius-bottomleft: 2px;
+}
+.comments .comment .commentLeft .commentVisitor {
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+  text-shadow: 0 -1px 1px #fff;
+}
+.comments .comment .commentRight {
+  float: left;
+  width: 80%;
+  margin: 0 auto;
+}
+.comments .comment .commentRight .commentCreated {
+  margin: 0 auto;
+  text-align: right;
+  border-bottom: solid 1px #bbb;
+  font-size: 0.8em;
+  font-family: sans-serif;
+  color: #999;
+}
+.comments .comment .commentRight .commentContent {
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #444;
+}
