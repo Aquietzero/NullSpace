@@ -52,6 +52,7 @@ def tagsForIndex(blog_list):
 
 
 def categoriesForIndex(blog_list):
+
     category_list = Category.objects.all()
     categories = []
     for category in category_list:
@@ -67,6 +68,7 @@ def categoriesForIndex(blog_list):
 
 
 def archieveForIndex(blog_list):
+
     thisYear = datetime.now().year
     blog_list = Blog.objects.order_by('created')
     oldestYear = blog_list[0].created.year
@@ -89,6 +91,7 @@ def archieveForIndex(blog_list):
 
 @csrf_exempt
 def post(request, slug):
+
     post = Blog.objects.get(slug=slug)
 
     if request.method == 'POST':
@@ -101,14 +104,23 @@ def post(request, slug):
     else:
         comment = CommentForm()
          
+    blog_list = Blog.objects.order_by('created').reverse()
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
+
     return render_to_response('post_solo.html', { 
-        'post'    :post, 
-        'comment' :comment,
+        'post'       : post, 
+        'comment'    : comment,
+        'tags'       : tags,
+        'categories' : categories,
+        'archieve'   : archieve,
     })
 
 
 
 def saveComment(comment, post):
+
     c = Comment()
     c.approved = False
     c.blog = post

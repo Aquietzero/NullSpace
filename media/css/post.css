@@ -33,7 +33,7 @@
   color: #000;
 }
 .post .postHeading .postTitle a:hover {
-  color: #603;
+  color: rgba(100,0,50,0.80);
 }
 .post .postHeading .postTime {
   float: left;
@@ -93,14 +93,10 @@
 .post .postBody code {
   border: solid 1px #bbb;
   font-size: 0.8em;
-  background-color: #efefef;
+  background-color: rgba(255,255,255,0.40);
   -moz-border-radius: 3px;
   padding: 0.5px;
   color: #000;
-}
-.post .postBody hr {
-  border: none;
-  border-bottom: solid 0.5px #bbb;
 }
 .post .postBody a {
   text-decoration: none;
@@ -108,6 +104,11 @@
 }
 .post .postBody a:hover {
   text-shadow: 0 0 1px rgba(200,0,50,0.80);
+  text-decoration: underline;
+}
+.post .postBody hr {
+  border: none;
+  border-bottom: solid 0.5px #bbb;
 }
 .post .postBody blockquote {
   border-left: solid 7px #cfcfcf;
@@ -116,4 +117,11 @@
 .post .postBody blockquote p {
   font-style: oblique;
   color: #777;
+}
+.post .postTags {
+  border-left: solid 10px #bbb;
+  border-top: solid 2px #bbb;
+  padding: 3px 10px;
+  margin: 0;
+  color: #666;
 }

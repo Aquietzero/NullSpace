@@ -24,8 +24,12 @@
   </div>
 
   <div class="postTags">
-    <p>{{ post.tags.all }}</p>
+    &#9998;Tags:&nbsp;&nbsp;
+    {% for tag in post.tags.all %}
+      &bull;{{ tag.name }}&nbsp;&nbsp;
+    {% endfor %}
   </div>
 
   {% include 'comment.html' %}
+
 </div>
