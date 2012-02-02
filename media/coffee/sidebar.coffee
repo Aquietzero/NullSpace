@@ -3,10 +3,10 @@ $ ->
   width = sidebar.width()
 
   sidebar.css
-    'margin-left' : -width + 35 + 'px'
+    'margin-right' : -width + 30 + 'px'
 
   sidebar.hover (-> $(this).animate
-      'margin-left':0
+      'margin-right' : 0
     ), (-> $(this).animate
-      'margin-left':-width + 30 + 'px'
+      'margin-right' : -width + 30 + 'px'
     )

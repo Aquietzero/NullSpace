@@ -5,15 +5,15 @@
     sidebar = $('#sidebar');
     width = sidebar.width();
     sidebar.css({
-      'margin-left': -width + 35 + 'px'
+      'margin-right': -width + 30 + 'px'
     });
     return sidebar.hover((function() {
       return $(this).animate({
-        'margin-left': 0
+        'margin-right': 0
       });
     }), (function() {
       return $(this).animate({
-        'margin-left': -width + 30 + 'px'
+        'margin-right': -width + 30 + 'px'
       });
     }));
   });

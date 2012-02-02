@@ -2,8 +2,7 @@
   margin: 0 auto 30px auto;
   padding: 50px;
   background-color: rgba(255,255,255,0.90);
-  -moz-box-shadow: 0 0 10px #000;
-  -moz-border-radius: 10px;
+  -moz-box-shadow: 0 0 5px #111;
 }
 .post .postHeading {
   width: 122%;
@@ -14,8 +13,6 @@
   left: -125px;
   -moz-box-shadow: -2px 2px 5px rgba(0,0,0,0.70);
   overflow: hidden;
-  -moz-border-radius-topleft: 15px;
-  -moz-border-radius-bottomleft: 30px;
   -moz-border-radius-bottomright: 30px;
   background-color: #f6f6f6;
 }
@@ -46,13 +43,11 @@
   display: none;
 }
 .post .postHeading .postTime .createdMonthWrapper {
-  -moz-border-radius-topleft: 15px;
   background-color: #fff;
   height: 50%;
 }
 .post .postHeading .postTime .createdMonthWrapper .createdMonth {
   background-color: #903;
-  -moz-border-radius-topleft: 15px;
   -moz-border-radius-bottomleft: 50px;
   height: 100%;
   color: #fff;

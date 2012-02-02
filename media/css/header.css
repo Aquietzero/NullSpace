@@ -1,0 +1,38 @@
+@font-face {
+  font-family: nullFont;
+  src: url("/media/stylus/Caraway.ttf");
+}
+@font-face {
+  font-family: spaceFont;
+  src: url("/media/stylus/BastardusSans.ttf");
+}
+#NullSpace {
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  padding-left: 80px;
+}
+#NullSpace a {
+  color: #000;
+  text-decoration: none;
+  font-size: 40pt;
+  vertical-align: middle;
+}
+#NullSpace p {
+  font-weight: normal;
+  font-size: 10pt;
+}
+#NullSpace #Null {
+  font-family: spaceFont;
+  color: rgba(255,255,255,0.30);
+  z-index: -50;
+  font-size: 95pt;
+  font-weight: bold;
+}
+#NullSpace #Space {
+  font-family: nullFont;
+  font-size: 75pt;
+  z-index: 50;
+  margin-left: -45px;
+  margin-top: 30px;
+}

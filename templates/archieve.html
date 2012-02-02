@@ -11,7 +11,7 @@
             <p>{{ month.month }}</p>
             <ul>
               {% for blog in month.blogs %}
-                <p>{{ blog.title }}</p>
+                <p><a href="/index/{{ blog.slug }}">{{ blog.title }}</a>{{ blog.created }}</p>
               {% endfor %}
             </ul>
           </li>
