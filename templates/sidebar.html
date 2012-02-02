@@ -1,11 +1,11 @@
 <div id="sidebarContent">
   <div id="archieves">
-    <h3 class="sidebarTitle">Archieve</h3>
+    <h3 class="sidebarTitle"><a href="archieve">Archieve</a></h3>
     {% for year in archieve %}
     <ul class="archieves">
       <li class="year">{{ year.year }}</li>
       {% for month in year.months %}
-      <li class="month">{{ month.month }}({{ month.size }})</li>
+      <li class="month">{{ month.month }}({{ month.blogs|length }})</li>
       {% endfor %}
     </ul>
     {% endfor %}

@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     #url(r'^admin/blogs/blog/add/$', 'NullSpace.blogs.admin_views.add_blog'),
     url(r'^admin/', include(admin.site.urls)),
     (r'^index/$', index),
+    (r'^index/archieve$', archieve),
     (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)$', post),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root':settings.MEDIA_ROOT }),
 )

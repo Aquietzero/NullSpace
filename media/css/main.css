@@ -1,3 +1,7 @@
+@font-face {
+  font-family: titleFont;
+  src: url("/media/stylus/abaddon/abaddon.TTF");
+}
 body {
   background: url("/media/img/body.jpg");
   margin: 0;
@@ -14,6 +18,22 @@ body {
   padding: 0;
   overflow: hidden;
   border-bottom: solid 1px rgba(100,100,100,0.60);
+}
+#NullSpace p {
+  color: #fff;
+  font-weight: normal;
+  font-size: 10pt;
+  color: #666;
+  padding-top: 20px;
+}
+#NullSpace p a {
+  text-decoration: none;
+  color: #222;
+  font-size: 40pt;
+  font-weight: bold;
+  font-family: titleFont;
+  vertical-align: middle;
+  text-shadow: 0 1px 1px #fff;
 }
 #sidebar {
   margin: 0;

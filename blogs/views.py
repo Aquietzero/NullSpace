@@ -84,7 +84,7 @@ def archieveForIndex(blog_list):
 
     return [ {'year'   : year,
               'months' : [ {'month' : archieve[year][month][0].created.strftime('%B'), 
-                            'size'  : len(archieve[year][month]) 
+                            'blogs'  : archieve[year][month] 
                            } for month in archieve[year] if len(archieve[year][month]) != 0 ]
              } for year in archieve ]
 
@@ -130,3 +130,18 @@ def saveComment(comment, post):
     c.email   = comment.cleaned_data['email']
     c.content = comment.cleaned_data['content']
     c.save()
+
+
+
+def archieve(request):
+
+    blog_list = Blog.objects.order_by('created').reverse()
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
+
+    return render_to_response('archieve.html', { 
+      'tags'       : tags,
+      'categories' : categories,
+      'archieve':archieve 
+    })
