@@ -1,10 +1,10 @@
 @font-face {
   font-family: nullFont;
-  src: url("/media/stylus/Caraway.ttf");
+  src: url("/media/stylus/fonts/ARGOS.TTF");
 }
 @font-face {
   font-family: spaceFont;
-  src: url("/media/stylus/BastardusSans.ttf");
+  src: url("/media/stylus/fonts/ARGOS.TTF");
 }
 #NullSpace {
   padding: 0;
@@ -21,18 +21,23 @@
 #NullSpace p {
   font-weight: normal;
   font-size: 10pt;
+  color: #666;
 }
 #NullSpace #Null {
-  font-family: spaceFont;
-  color: rgba(255,255,255,0.30);
-  z-index: -50;
+  font-family: nullFont;
+  color: #000;
+  z-index: 50;
   font-size: 95pt;
   font-weight: bold;
+  text-shadow: 0 0 2px rgba(0,0,100,0.90);
+  letter-spacing: -10px;
 }
 #NullSpace #Space {
-  font-family: nullFont;
+  font-family: spaceFont;
   font-size: 75pt;
-  z-index: 50;
+  z-index: -50;
   margin-left: -45px;
   margin-top: 30px;
+  color: #9b0032;
+  text-shadow: 0 0 3px #000;
 }
