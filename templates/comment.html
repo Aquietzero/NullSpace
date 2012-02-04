@@ -1,5 +1,13 @@
 <div class="leaveCommentButton">
-  <p>{{ post.comment_set.all|length }} Comments</p>
+  {% if post.comment_set.all|length > 1 %}
+    <p>{{ post.comment_set.all|length }} Comments</p>
+  {% else %}
+    {% if post.comment_set.all|length == 1 %}
+      <p>{{ post.comment_set.all|length }} Comment</p>
+    {% else %}
+      <p>No Comment</p>
+    {% endif %}
+  {% endif %}
 </div>
 
 <div class="leaveComment">
