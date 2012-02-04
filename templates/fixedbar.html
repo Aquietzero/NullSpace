@@ -1,0 +1,11 @@
+<div id="fixedbar">
+  <div id="tags">
+    <h3 class="sidebarTitle">Tags</h3>
+    <p>
+      {% for tag in tags %}
+      <span style="font-size:{{ tag.fontSize }}px">{{ tag.name }}</span>
+      {% endfor %}
+    </p>
+  </div>
+</div>
+

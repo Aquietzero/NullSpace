@@ -47,7 +47,7 @@ def tagsForIndex(blog_list):
         for tagName in blog.getTags():
             tags[tagName] += 1
 
-    return [ {'name':name, 'size':tags[name]} for name in tags ]
+    return [ {'name':name, 'size':tags[name], 'fontSize':tags[name]+10} for name in tags ]
 
 
 
