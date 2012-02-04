@@ -126,6 +126,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'coffeescript',
     'stylus',
+    'django_gravatar',
     'NullSpace.blogs',
 )
 
@@ -151,3 +152,4 @@ LOGGING = {
         },
     }
 }
+
