@@ -13,7 +13,13 @@
 
 {% block mainContent %}
   {% include 'post.html' %}
-  <a href="/index/{{ post.slug }}next">Next</a>
-  <a href="/index/{{ post.slug }}prev">Prev</a>
+  <div class="postButtons">
+    <div class="prevButton">
+      <a href="/index/{{ post.slug }}prev">&#9666;</a>
+    </div>
+    <div class="nextButton">
+      <a href="/index/{{ post.slug }}next">&#9656;</a>
+    </div>
+  </div>
 {% endblock %}
 

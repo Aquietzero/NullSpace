@@ -122,3 +122,42 @@
   margin: 0;
   color: #666;
 }
+.postButtons {
+  text-align: center;
+  overflow: hidden;
+  width: 150px;
+  padding: 5px;
+  margin: 0 auto;
+  font-size: 15pt;
+}
+.postButtons .prevButton,
+.postButtons .nextButton {
+  float: left;
+  width: 45%;
+  height: 30px;
+  margin: 0;
+  background-color: rgba(150,150,150,0.30);
+}
+.postButtons .prevButton a,
+.postButtons .nextButton a {
+  color: #666;
+  text-decoration: none;
+}
+.postButtons .prevButton:hover,
+.postButtons .nextButton:hover {
+  background-color: rgba(150,0,50,0.30);
+  text-shadow: 0 0 2px #333;
+  cursor: pointer;
+}
+.postButtons .prevButton:hover a,
+.postButtons .nextButton:hover a {
+  color: #960032;
+}
+.postButtons .prevButton {
+  -moz-border-radius-topleft: 100px;
+  -moz-border-radius-bottomleft: 100px;
+}
+.postButtons .nextButton {
+  -moz-border-radius-topright: 100px;
+  -moz-border-radius-bottomright: 100px;
+}
