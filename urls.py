@@ -20,5 +20,7 @@ urlpatterns = patterns('',
     (r'^index/$', index),
     (r'^index/archieve$', archieve),
     (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)$', post),
+    (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)next$', nextPost),
+    (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)prev$', prevPost),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root':settings.MEDIA_ROOT }),
 )

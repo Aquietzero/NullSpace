@@ -94,16 +94,7 @@ def post(request, slug):
 
     post = Blog.objects.get(slug=slug)
 
-    if request.method == 'POST':
-        comment = CommentForm(request.POST)
-        if comment.is_valid():
-            saveComment(comment, post)
-            return HttpResponseRedirect('/index/' + slug)
-        else:
-            return HttpResponseRedirect('/index/' + slug)
-    else:
-        comment = CommentForm()
-         
+    comment = commentForm(request, slug)
     blog_list = Blog.objects.order_by('created').reverse()
     categories = categoriesForIndex(blog_list)
     tags = tagsForIndex(blog_list)
@@ -133,6 +124,24 @@ def saveComment(comment, post):
 
 
 
+def commentForm(request, slug):
+
+    post = Blog.objects.get(slug=slug)
+
+    if request.method == 'POST':
+        comment = CommentForm(request.POST)
+        if comment.is_valid():
+            saveComment(comment, post)
+            return HttpResponseRedirect('/index/' + slug)
+        else:
+            return HttpResponseRedirect('/index/' + slug)
+    else:
+        comment = CommentForm()
+
+    return comment
+
+
+
 def archieve(request):
 
     blog_list = Blog.objects.order_by('created').reverse()
@@ -141,7 +150,56 @@ def archieve(request):
     archieve = archieveForIndex(blog_list)
 
     return render_to_response('archieve.html', { 
-      'tags'       : tags,
-      'categories' : categories,
-      'archieve':archieve 
+        'tags'       : tags,
+        'categories' : categories,
+        'archieve':archieve 
     })
+
+
+
+def nextPost(request, slug):
+
+    post = Blog.objects.get(slug=slug)
+    try:
+        nextPost = Blog.objects.filter(id__gt=post.id)[0]
+    except:
+        nextPost = Blog.objects.get(id=1)
+
+    comment = commentForm(request, slug)
+    blog_list = Blog.objects.order_by('created').reverse()
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
+
+    return render_to_response('post_solo.html', { 
+        'post'       : nextPost, 
+        'comment'    : comment,
+        'tags'       : tags,
+        'categories' : categories,
+        'archieve'   : archieve,
+    })
+
+
+
+def prevPost(request, slug):
+
+    post = Blog.objects.get(slug=slug)
+    try:
+        prevPost = Blog.objects.filter(id__lt=post.id).reverse()[0]
+    except:
+        prevPost = Blog.objects.order_by('id').reverse()[0]
+
+    comment = commentForm(request, slug)
+    blog_list = Blog.objects.order_by('created').reverse()
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
+
+    return render_to_response('post_solo.html', { 
+        'post'       : prevPost, 
+        'comment'    : comment,
+        'tags'       : tags,
+        'categories' : categories,
+        'archieve'   : archieve,
+    })
+

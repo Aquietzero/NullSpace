@@ -10,7 +10,10 @@ class BlogAdmin(admin.ModelAdmin):
     filter_horizontal = ('tags',)  # better for many to many selection.
     #raw_id_fields = ('category',) # better for foreign keys selection.
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('visitor', 'created', 'approved')
+
 admin.site.register(Blog, BlogAdmin)
-admin.site.register(Comment)
+admin.site.register(Comment, CommentAdmin)
 admin.site.register(Tag)
 admin.site.register(Category)

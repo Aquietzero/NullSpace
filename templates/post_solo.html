@@ -8,10 +8,12 @@
 {% endblock %}
 
 {% block title %}
-  {{ blog.title }} 
+  {{ post.title }} 
 {% endblock %}
 
 {% block mainContent %}
   {% include 'post.html' %}
+  <a href="/index/{{ post.slug }}next">Next</a>
+  <a href="/index/{{ post.slug }}prev">Prev</a>
 {% endblock %}
 
