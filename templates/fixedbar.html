@@ -1,9 +1,31 @@
 <div id="fixedbar">
+  <div id="about">
+    <p class="subtitle">About</p>
+    <ul>
+      <li>Name : Zero</li>
+      <li>Profession : College Student</li>
+      <li>Hobby : Programming, Cubing, Swimming</li>
+      <li>Language : Chinese, English, French</li>
+      <li>PC Languange : C/C++, Python</li>
+    </ul>
+  </div>
+  
+  <div id="contact">
+    <p class="subtitle">Contact</p>
+    <ul>
+      <li>Phone : 15019758569</li>
+      <li>Email : zhaoyunhaosss@gmail.com</li>
+      <li>Github : Aquietzero</li>
+    </ul>
+  </div>
+  
   <div id="tags">
-    <h3 class="sidebarTitle">Tags</h3>
+    <p class="subtitle">Tags</p>
     <p>
       {% for tag in tags %}
-      <span style="font-size:{{ tag.fontSize }}px">{{ tag.name }}</span>
+      <a href="/index/tags/{{ tag.name }}">
+        <span style="font-size:{{ tag.fontSize }}px">{{ tag.name }}</span>
+      </a>
       {% endfor %}
     </p>
   </div>

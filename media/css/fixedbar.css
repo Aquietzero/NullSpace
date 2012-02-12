@@ -1,3 +1,10 @@
+#fixedbar .subtitle {
+  font-family: subtitleFont;
+  font-size: 18pt;
+  border-bottom: solid 1px #999;
+  padding: 0;
+  margin: 0;
+}
 #fixedbar #tags {
   text-align: justify;
 }

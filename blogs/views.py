@@ -11,19 +11,7 @@ def index(request):
 
     blog_list = Blog.objects.order_by('created').reverse()
 
-    # pagination
-    paginator = Paginator(blog_list, 5)
-    page = request.GET.get('page')
-    if page: 
-        try:
-            blogs = paginator.page(page)
-        except PageNotAnInteger:
-            blogs = paginator.page(1)
-        except EmptyPage:
-            blogs = paginator.page(paginator.num_pages)
-    else:
-        blogs = paginator.page(1)
-
+    blogs = postsPagination(request, blog_list)
     categories = categoriesForIndex(blog_list)
     tags = tagsForIndex(blog_list)
     archieve = archieveForIndex(blog_list)
@@ -37,11 +25,8 @@ def index(request):
 
 
 
-def postsForCategory(request, category):
+def postsPagination(request, blog_list):
 
-    blog_list = Blog.objects.filter(category__name=category)
-
-    # pagination
     paginator = Paginator(blog_list, 5)
     page = request.GET.get('page')
     if page: 
@@ -54,6 +39,15 @@ def postsForCategory(request, category):
     else:
         blogs = paginator.page(1)
 
+    return blogs
+
+
+
+def postsForCategory(request, category):
+
+    blog_list = Blog.objects.filter(category__name=category)
+
+    blogs = postsPagination(request, blog_list)
     categories = categoriesForIndex(blog_list)
     tags = tagsForIndex(blog_list)
     archieve = archieveForIndex(blog_list)
@@ -69,21 +63,35 @@ def postsForCategory(request, category):
 
 def postsForCreated(request, year, month):
 
-    blog_list = Blog.objects.filter(created__year=year).filter(created__month=MONTHS[month])
+    blog_list = Blog.objects.filter(created__year=year, created__month=MONTHS[month])
 
-    # pagination
-    paginator = Paginator(blog_list, 5)
-    page = request.GET.get('page')
-    if page: 
-        try:
-            blogs = paginator.page(page)
-        except PageNotAnInteger:
-            blogs = paginator.page(1)
-        except EmptyPage:
-            blogs = paginator.page(paginator.num_pages)
-    else:
-        blogs = paginator.page(1)
+    blogs = postsPagination(request, blog_list)
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
 
+    return render_to_response('index.html', 
+            { 'blogs'      : blogs,
+              'categories' : categories,
+              'tags'       : tags,
+              'archieve'   : archieve,
+            })
+
+
+
+def postsForTag(request, tagName):
+
+    posts = Blog.objects.all()
+    blog_list = []
+
+    for post in posts:
+        tags = post.tags.all()
+        for tag in tags:
+            print tag.name
+            if tag.name == tagName:
+                blog_list.append(post)
+
+    blogs = postsPagination(request, blog_list)
     categories = categoriesForIndex(blog_list)
     tags = tagsForIndex(blog_list)
     archieve = archieveForIndex(blog_list)
