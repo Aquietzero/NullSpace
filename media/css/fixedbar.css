@@ -1,3 +1,13 @@
+#fixedbar {
+  margin-left: -10px;
+  margin-top: 50px;
+  padding: 10px;
+  border-top: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  -moz-box-shadow: 0 0 3px rgba(150,150,150,0.30);
+  background-color: rgba(220,220,220,0.10);
+}
 #fixedbar .subtitle {
   font-family: subtitleFont;
   font-size: 18pt;
@@ -5,6 +15,21 @@
   padding: 0;
   margin: 0;
 }
-#fixedbar #tags {
+#fixedbar #tags,
+#fixedbar #about,
+#fixedbar #contact {
+  margin: 10px 0;
   text-align: justify;
+}
+#fixedbar #tags a,
+#fixedbar #about a,
+#fixedbar #contact a {
+  color: #000;
+  text-decoration: none;
+}
+#fixedbar #tags a:hover,
+#fixedbar #about a:hover,
+#fixedbar #contact a:hover {
+  color: #370032;
+  border-bottom: solid 3px #370032;
 }

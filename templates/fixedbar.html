@@ -23,9 +23,7 @@
     <p class="subtitle">Tags</p>
     <p>
       {% for tag in tags %}
-      <a href="/index/tags/{{ tag.name }}">
-        <span style="font-size:{{ tag.fontSize }}px">{{ tag.name }}</span>
-      </a>
+      <a href="/index/tags/{{ tag.name }}"><span style="font-size:{{ tag.fontSize }}px">{{ tag.name }}</span></a>
       {% endfor %}
     </p>
   </div>

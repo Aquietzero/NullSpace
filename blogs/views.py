@@ -46,11 +46,12 @@ def postsPagination(request, blog_list):
 def postsForCategory(request, category):
 
     blog_list = Blog.objects.filter(category__name=category)
+    all_blogs = Blog.objects.all()
 
     blogs = postsPagination(request, blog_list)
-    categories = categoriesForIndex(blog_list)
-    tags = tagsForIndex(blog_list)
-    archieve = archieveForIndex(blog_list)
+    categories = categoriesForIndex(all_blogs)
+    tags = tagsForIndex(all_blogs)
+    archieve = archieveForIndex(all_blogs)
 
     return render_to_response('index.html', 
             { 'blogs'      : blogs,
@@ -64,11 +65,12 @@ def postsForCategory(request, category):
 def postsForCreated(request, year, month):
 
     blog_list = Blog.objects.filter(created__year=year, created__month=MONTHS[month])
+    all_blogs = Blog.objects.all()
 
     blogs = postsPagination(request, blog_list)
-    categories = categoriesForIndex(blog_list)
-    tags = tagsForIndex(blog_list)
-    archieve = archieveForIndex(blog_list)
+    categories = categoriesForIndex(all_blogs)
+    tags = tagsForIndex(all_blogs)
+    archieve = archieveForIndex(all_blogs)
 
     return render_to_response('index.html', 
             { 'blogs'      : blogs,
@@ -92,9 +94,9 @@ def postsForTag(request, tagName):
                 blog_list.append(post)
 
     blogs = postsPagination(request, blog_list)
-    categories = categoriesForIndex(blog_list)
-    tags = tagsForIndex(blog_list)
-    archieve = archieveForIndex(blog_list)
+    categories = categoriesForIndex(posts)
+    tags = tagsForIndex(posts)
+    archieve = archieveForIndex(posts)
 
     return render_to_response('index.html', 
             { 'blogs'      : blogs,
