@@ -131,26 +131,30 @@
   font-size: 15pt;
 }
 .postButtons .prevButton,
-.postButtons .nextButton {
+.postButtons .nextButton,
+.postButtons .homeButton {
   float: left;
-  width: 45%;
+  width: 30%;
   height: 30px;
   margin: 0;
   background-color: rgba(150,150,150,0.30);
 }
 .postButtons .prevButton a,
-.postButtons .nextButton a {
+.postButtons .nextButton a,
+.postButtons .homeButton a {
   color: #666;
   text-decoration: none;
 }
 .postButtons .prevButton:hover,
-.postButtons .nextButton:hover {
+.postButtons .nextButton:hover,
+.postButtons .homeButton:hover {
   background-color: rgba(150,0,50,0.30);
   text-shadow: 0 0 2px #333;
   cursor: pointer;
 }
 .postButtons .prevButton:hover a,
-.postButtons .nextButton:hover a {
+.postButtons .nextButton:hover a,
+.postButtons .homeButton:hover a {
   color: #960032;
 }
 .postButtons .prevButton {
@@ -160,4 +164,10 @@
 .postButtons .nextButton {
   -moz-border-radius-topright: 100px;
   -moz-border-radius-bottomright: 100px;
+}
+.postButtons .homeButton {
+  background-color: rgba(150,150,150,0.50);
+}
+.postButtons .homeButton img {
+  width: 60%;
 }

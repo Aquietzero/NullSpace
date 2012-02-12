@@ -1,17 +1,21 @@
 {% extends 'frame.html' %}
 
 {% block mainContent %}
-  <ul>
+  <div class="archieve">
+  <ul class="years">
   {% for year in archieve %}
-    <li>
+    <li class="year">
       <p>{{ year.year }}</p>
-      <ul>
+      <ul class="months">
         {% for month in year.months %}
-          <li>
-            <p>{{ month.month }}</p>
-            <ul>
+          <li class="month">
+            <p>{{ month.month }}({{ month.blogs|length }})</p>
+            <ul class="postTitles">
               {% for blog in month.blogs %}
-                <p><a href="/index/{{ blog.slug }}">{{ blog.title }}</a>{{ blog.created }}</p>
+                <li class="postTitle">
+                  <a href="/index/{{ blog.slug }}">{{ blog.title }}</a>&nbsp;
+                  <span class="postCreated">&#9998;{{ blog.created }}</span>
+                </li>
               {% endfor %}
             </ul>
           </li>
@@ -20,4 +24,5 @@
     </li>
   {% endfor %}
   </ul>
+  </div>
 {% endblock %}
