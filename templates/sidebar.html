@@ -9,7 +9,11 @@
     <ul class="archieves">
       <li class="year">{{ year.year }}</li>
       {% for month in year.months %}
-      <li class="month">{{ month.month }}({{ month.blogs|length }})</li>
+      <li class="month">
+        <a href="/index/created/{{ year.year }}/{{ month.month }}">
+          {{ month.month }}({{ month.blogs|length }})
+        </a>
+      </li>
       {% endfor %}
     </ul>
     {% endfor %}
@@ -19,7 +23,9 @@
     <h3 class="sidebarTitle">Categories</h3>
     <ul class="categories">
       {% for category in categories %}
-      <li class="category">{{ category.name }}({{ category.size }})</li>
+      <li class="category">
+        <a href="/index/category/{{ category.name }}">{{ category.name }}({{ category.size }})</a>
+      </li>
       {% endfor %}
     </ul>
   </div>

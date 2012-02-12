@@ -27,7 +27,6 @@
   
   .month
   .category
-    color #444444
     font-weight bold
     list-style-type none
     border-bottom solid 1px rgba(50, 50, 50, 0.7)
@@ -39,9 +38,14 @@
     text-shadow 0 1px 1px white
 
     &:hover
-      color #003366
-      cursor pointer
       background -moz-linear-gradient(top, rgba(250, 250, 250, 0.5), rgba(250, 250, 250, 0.6))
+
+    a
+      text-decoration none
+      color #444444
+
+      &:hover
+        color #003366
 
   .year
     font-weight bold

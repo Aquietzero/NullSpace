@@ -1,6 +1,11 @@
 {% extends 'frame.html' %}
 
 {% block mainContent %}
+<div class="archievePage">
+  <div class="archieveTitle">
+    <p>Archieve</p>
+  </div>
+
   <div class="archieve">
   <ul class="years">
   {% for year in archieve %}
@@ -25,4 +30,5 @@
   {% endfor %}
   </ul>
   </div>
+</div>
 {% endblock %}

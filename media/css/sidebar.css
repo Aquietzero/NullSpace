@@ -26,7 +26,6 @@
 }
 #sidebarContent .month,
 #sidebarContent .category {
-  color: #444;
   font-weight: bold;
   list-style-type: none;
   border-bottom: solid 1px rgba(50,50,50,0.70);
@@ -39,9 +38,16 @@
 }
 #sidebarContent .month:hover,
 #sidebarContent .category:hover {
-  color: #036;
-  cursor: pointer;
   background: -moz-linear-gradient(top, rgba(250,250,250,0.50), rgba(250,250,250,0.60));
+}
+#sidebarContent .month a,
+#sidebarContent .category a {
+  text-decoration: none;
+  color: #444;
+}
+#sidebarContent .month a:hover,
+#sidebarContent .category a:hover {
+  color: #036;
 }
 #sidebarContent .year {
   font-weight: bold;
