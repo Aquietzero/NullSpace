@@ -171,13 +171,18 @@ def post(request, slug):
     tags = tagsForIndex(blog_list)
     archieve = archieveForIndex(blog_list)
 
-    return render_to_response('post_solo.html', { 
-        'post'       : post, 
-        'comment'    : comment,
-        'tags'       : tags,
-        'categories' : categories,
-        'archieve'   : archieve,
-    })
+    referer = request.META['HTTP_REFERER'].split('/')[-2]
+
+    if referer == 'index' and request.POST:
+        return HttpResponseRedirect('/index/')
+    else:
+        return render_to_response('post_solo.html', { 
+            'post'       : post, 
+            'comment'    : comment,
+            'tags'       : tags,
+            'categories' : categories,
+            'archieve'   : archieve,
+        })
 
 
 

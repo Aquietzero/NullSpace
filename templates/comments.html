@@ -1,4 +1,5 @@
 {% load gravatar %}
+{% load markup %}
 
 <div class="comments">
   {% for comment in comments %}
@@ -12,7 +13,7 @@
         </div>
         <div class="commentRight">
           <div class="commentCreated">{{ comment.created }}</div>
-          <div class="commentContent">{{ comment.content }}</div>
+          <div class="commentContent">{{ comment.content|markdown:'codehilite' }}</div>
         </div>
       </div>
     {% endif %}

@@ -76,7 +76,7 @@
 }
 .leaveCommentButton p:hover {
   cursor: pointer;
-  color: #903;
+  color: rgba(155,0,50,0.80);
 }
 .leaveComment hr {
   margin: 0;
@@ -84,7 +84,6 @@
   padding: 0;
   width: 95%;
   border: none;
-  border-bottom: solid 0.5px #bbb;
 }
 .leaveComment p {
   padding: 0;
