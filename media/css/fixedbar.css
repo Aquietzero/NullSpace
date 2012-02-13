@@ -1,7 +1,7 @@
 #fixedbar {
   margin-left: -10px;
   margin-top: 50px;
-  padding: 10px;
+  padding: 10px 15px;
   border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
@@ -18,8 +18,12 @@
 #fixedbar #tags,
 #fixedbar #about,
 #fixedbar #contact {
-  margin: 10px 0;
   text-align: justify;
+}
+#fixedbar #tags p,
+#fixedbar #about p,
+#fixedbar #contact p {
+  margin: 5px;
 }
 #fixedbar #tags a,
 #fixedbar #about a,

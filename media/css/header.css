@@ -1,11 +1,3 @@
-@font-face {
-  font-family: nullFont;
-  src: url("/media/stylus/fonts/ARGOS.TTF");
-}
-@font-face {
-  font-family: spaceFont;
-  src: url("/media/stylus/fonts/ARGOS.TTF");
-}
 #NullSpace {
   padding: 0;
   margin: 0;
