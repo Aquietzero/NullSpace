@@ -5,7 +5,7 @@ postTimeSize = 75px
   margin 0 auto 30px auto
   padding postPadding
   background-color rgba(255, 255, 255, 0.9)
-  -moz-box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
+  box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
 
   .postHeading
     width 122%
@@ -14,11 +14,12 @@ postTimeSize = 75px
     position relative
     top -25px
     left -(postPadding + postTimeSize)
-    -moz-box-shadow 0px 2px 2px rgba(0, 0, 0, 0.2) 
+    box-shadow 0px 2px 2px rgba(0, 0, 0, 0.2) 
     overflow hidden
     //-moz-border-radius-topleft 15px
     //-moz-border-radius-bottomleft 30px
     -moz-border-radius-bottomright 30px
+    -webkit-border-bottom-right-radius 30px
     background-color #F6F6F6 
 
     .postTitle
@@ -59,6 +60,7 @@ postTimeSize = 75px
           background-color #990033
           //-moz-border-radius-topleft 15px
           -moz-border-radius-bottomleft 50px
+          -webkit-border-bottom-left-radius 50px
           height 100%
           color white
           font-weight bold
@@ -72,6 +74,7 @@ postTimeSize = 75px
         .createdDay
           background-color white
           -moz-border-radius-topright 50px
+          -webkit-border-top-right-radius 50px
           height 100%
           color #990033 
           font-weight bold
@@ -158,10 +161,14 @@ postTimeSize = 75px
   .prevButton
     -moz-border-radius-topleft 100px
     -moz-border-radius-bottomleft 100px
+    -webkit-border-radius-topleft 100px
+    -webkit-border-radius-bottomleft 100px
 
   .nextButton
     -moz-border-radius-topright 100px
     -moz-border-radius-bottomright 100px
+    -webkit-border-radius-topright 100px
+    -webkit-border-radius-bottomright 100px
 
   .homeButton
     background-color rgba(150, 150, 150, 0.5)

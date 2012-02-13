@@ -1,39 +1,87 @@
-#fixedbar {
+#fixedbarUp {
   margin-left: -10px;
-  margin-top: 50px;
+}
+#fixedbarUp div {
+  font-family: subtitleFont;
+  font-size: 15pt;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-align: middle;
+  width: 64px;
+  height: 64px;
+}
+#fixedbarUp a {
+  display: block;
+  min-width: 64px;
+  min-height: 64px;
+  max-width: 64px;
+  max-height: 64px;
+}
+#fixedbarUp #twitter {
+  margin-left: 15px;
+  background: url("/media/img/twitter.png") no-repeat center;
+}
+#fixedbarUp #twitter:hover {
+  background: url("/media/img/twitterHover.png") no-repeat center;
+}
+#fixedbarUp #rss {
+  margin-left: 85px;
+  margin-top: -45px;
+  background: url("/media/img/rss.png") no-repeat center;
+}
+#fixedbarUp #rss:hover {
+  background: url("/media/img/rssHover.png") no-repeat center;
+}
+#fixedbarUp #github {
+  margin-left: 145px;
+  margin-top: -25px;
+  background: url("/media/img/github.png") no-repeat center;
+}
+#fixedbarUp #github:hover {
+  background: url("/media/img/githubHover.png") no-repeat center;
+}
+#fixedbarUp #gmail {
+  margin-left: 165px;
+  margin-top: 5px;
+  background: url("/media/img/gmail.png") no-repeat center;
+}
+#fixedbarUp #gmail:hover {
+  background: url("/media/img/gmailHover.png");
+}
+#fixedbarDown {
+  height: 100%;
+  margin-left: -10px;
+  margin-top: 20px;
   padding: 10px 15px;
   border-top: solid 1px #ccc;
   border-right: solid 1px #ccc;
   border-bottom: solid 1px #ccc;
-  -moz-box-shadow: 0 0 3px rgba(150,150,150,0.30);
+  box-shadow: 0 0 3px rgba(150,150,150,0.30);
   background-color: rgba(220,220,220,0.10);
 }
-#fixedbar .subtitle {
+#fixedbarDown .subtitle {
   font-family: subtitleFont;
   font-size: 18pt;
+  letter-spacing: 2px;
   border-bottom: solid 1px #999;
   padding: 0;
   margin: 0;
 }
-#fixedbar #tags,
-#fixedbar #about,
-#fixedbar #contact {
+#fixedbarDown #tags,
+#fixedbarDown #links {
   text-align: justify;
 }
-#fixedbar #tags p,
-#fixedbar #about p,
-#fixedbar #contact p {
+#fixedbarDown #tags p,
+#fixedbarDown #links p {
   margin: 5px;
 }
-#fixedbar #tags a,
-#fixedbar #about a,
-#fixedbar #contact a {
+#fixedbarDown #tags a,
+#fixedbarDown #links a {
   color: #000;
   text-decoration: none;
 }
-#fixedbar #tags a:hover,
-#fixedbar #about a:hover,
-#fixedbar #contact a:hover {
+#fixedbarDown #tags a:hover,
+#fixedbarDown #links a:hover {
   color: #370032;
   border-bottom: solid 3px #370032;
 }

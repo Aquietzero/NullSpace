@@ -160,6 +160,7 @@ def archieveForIndex(blog_list):
              } for year in archieve ]
 
 
+
 @csrf_exempt
 def post(request, slug):
 

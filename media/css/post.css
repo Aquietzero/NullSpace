@@ -2,7 +2,7 @@
   margin: 0 auto 30px auto;
   padding: 50px;
   background-color: rgba(255,255,255,0.90);
-  -moz-box-shadow: 0 0 5px rgba(0,0,0,0.30);
+  box-shadow: 0 0 5px rgba(0,0,0,0.30);
 }
 .post .postHeading {
   width: 122%;
@@ -11,9 +11,10 @@
   position: relative;
   top: -25px;
   left: -125px;
-  -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.20);
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.20);
   overflow: hidden;
   -moz-border-radius-bottomright: 30px;
+  -webkit-border-bottom-right-radius: 30px;
   background-color: #f6f6f6;
 }
 .post .postHeading .postTitle {
@@ -49,6 +50,7 @@
 .post .postHeading .postTime .createdMonthWrapper .createdMonth {
   background-color: #903;
   -moz-border-radius-bottomleft: 50px;
+  -webkit-border-bottom-left-radius: 50px;
   height: 100%;
   color: #fff;
   font-weight: bold;
@@ -62,6 +64,7 @@
 .post .postHeading .postTime .createdDayWrapper .createdDay {
   background-color: #fff;
   -moz-border-radius-topright: 50px;
+  -webkit-border-top-right-radius: 50px;
   height: 100%;
   color: #903;
   font-weight: bold;
@@ -160,10 +163,14 @@
 .postButtons .prevButton {
   -moz-border-radius-topleft: 100px;
   -moz-border-radius-bottomleft: 100px;
+  -webkit-border-radius-topleft: 100px;
+  -webkit-border-radius-bottomleft: 100px;
 }
 .postButtons .nextButton {
   -moz-border-radius-topright: 100px;
   -moz-border-radius-bottomright: 100px;
+  -webkit-border-radius-topright: 100px;
+  -webkit-border-radius-bottomright: 100px;
 }
 .postButtons .homeButton {
   background-color: rgba(150,150,150,0.50);
