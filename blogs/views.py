@@ -280,3 +280,7 @@ def prevPost(request, slug):
         'archieve'   : archieve,
     })
 
+
+
+def about(request):
+    return render_to_response('about.html')

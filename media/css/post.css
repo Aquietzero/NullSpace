@@ -31,7 +31,9 @@
   color: #000;
 }
 .post .postHeading .postTitle a:hover {
-  color: rgba(100,0,50,0.80);
+  color: rgba(50,0,50,0.90);
+  text-decoration: underline;
+  text-shadow: 0 0 3px rgba(100,0,50,0.30);
 }
 .post .postHeading .postTime {
   float: left;

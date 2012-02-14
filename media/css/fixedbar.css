@@ -17,6 +17,9 @@
   max-width: 64px;
   max-height: 64px;
 }
+#fixedbarUp a img {
+  opacity: 0;
+}
 #fixedbarUp #twitter {
   margin-left: 15px;
   background: url("/media/img/twitter.png") no-repeat center;

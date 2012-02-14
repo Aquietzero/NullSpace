@@ -7,13 +7,22 @@
     sidebar.css({
       'margin-right': -width + 30 + 'px'
     });
-    return sidebar.hover((function() {
+    sidebar.hover((function() {
       return $(this).animate({
         'margin-right': 0
       });
     }), (function() {
       return $(this).animate({
         'margin-right': -width + 30 + 'px'
+      });
+    }));
+    return $('a img').hover((function() {
+      return $(this).animate({
+        'opacity': 100
+      });
+    }), (function() {
+      return $(this).animate({
+        'opacity': 0
       });
     }));
   });

@@ -10,3 +10,9 @@ $ ->
     ), (-> $(this).animate
       'margin-right' : -width + 30 + 'px'
     )
+
+  $('a img').hover (-> $(this).animate
+      'opacity' : 100
+    ), (-> $(this).animate
+      'opacity' : 0
+    )
