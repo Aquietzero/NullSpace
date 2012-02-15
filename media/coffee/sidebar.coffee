@@ -12,7 +12,7 @@ $ ->
     )
 
   $('a img').hover (-> $(this).animate
-      'opacity' : 100
+      'opacity' : 1, 'slow'
     ), (-> $(this).animate
-      'opacity' : 0
+      'opacity' : 0, 'slow'
     )

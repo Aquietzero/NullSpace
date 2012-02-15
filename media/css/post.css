@@ -1,8 +1,9 @@
 .post {
   margin: 0 auto 30px auto;
   padding: 50px;
-  background-color: rgba(255,255,255,0.90);
+  background-color: rgba(255,255,255,0.80);
   box-shadow: 0 0 5px rgba(0,0,0,0.30);
+  font-family: serifFont;
 }
 .post .postHeading {
   width: 122%;
@@ -25,15 +26,14 @@
 }
 .post .postHeading .postTitle a {
   display: block;
-  font-size: 20pt;
+  font-size: 25pt;
   font-weight: bold;
   text-decoration: none;
   color: #000;
 }
 .post .postHeading .postTitle a:hover {
-  color: rgba(50,0,50,0.90);
-  text-decoration: underline;
-  text-shadow: 0 0 3px rgba(100,0,50,0.30);
+  color: #036;
+  text-shadow: 0 0 1px #036;
 }
 .post .postHeading .postTime {
   float: left;
@@ -105,12 +105,12 @@
   color: #803;
 }
 .post .postBody a:hover {
-  text-shadow: 0 0 1px rgba(200,0,50,0.80);
   text-decoration: underline;
 }
 .post .postBody hr {
   border: none;
   border-bottom: solid 0.5px #bbb;
+  box-shadow: 0 1px 1px #fff;
 }
 .post .postBody blockquote {
   border-left: solid 7px #cfcfcf;
@@ -121,8 +121,9 @@
   color: #777;
 }
 .post .postTags {
-  border-left: solid 10px #bbb;
-  border-top: solid 2px #bbb;
+  font-family: sansSerifFont;
+  border-left: solid 10px #ddd;
+  border-top: solid 2px #ddd;
   padding: 3px 10px;
   margin: 0;
   color: #666;

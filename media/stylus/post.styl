@@ -4,8 +4,9 @@ postTimeSize = 75px
 .post
   margin 0 auto 30px auto
   padding postPadding
-  background-color rgba(255, 255, 255, 0.9)
+  background-color rgba(255, 255, 255, 0.8)
   box-shadow 0 0 5px rgba(0, 0, 0, 0.3)
+  font-family serifFont
 
   .postHeading
     width 122%
@@ -30,14 +31,13 @@ postTimeSize = 75px
 
       a
         display block
-        font-size 20pt
+        font-size 25pt
         font-weight bold
         text-decoration none
         color black
         &:hover
-          color rgba(50, 0, 50, 0.9)
-          text-decoration underline
-          text-shadow 0 0 3px rgba(100, 0, 50, 0.3)
+          color #003366
+          text-shadow 0 0 1px #003366
 
 
     .postTime
@@ -109,12 +109,12 @@ postTimeSize = 75px
       text-decoration none
       color #880033
       &:hover
-        text-shadow 0 0 1px rgba(200, 0, 50, 0.8)
         text-decoration underline 
 
     hr
       border none
       border-bottom solid 0.5px #BBBBBB
+      box-shadow 0 1px 1px white
 
     blockquote
       border-left solid 7px #CFCFCF
@@ -125,8 +125,9 @@ postTimeSize = 75px
         color #777777
 
   .postTags
-    border-left solid 10px #BBBBBB
-    border-top solid 2px #BBBBBB
+    font-family sansSerifFont
+    border-left solid 10px #DDDDDD
+    border-top solid 2px #DDDDDD
     padding 3px 10px
     margin 0
     color #666666

@@ -18,12 +18,12 @@
     }));
     return $('a img').hover((function() {
       return $(this).animate({
-        'opacity': 100
-      });
+        'opacity': 1
+      }, 'slow');
     }), (function() {
       return $(this).animate({
         'opacity': 0
-      });
+      }, 'slow');
     }));
   });
 

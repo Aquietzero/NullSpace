@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   border-left: solid 15px #000;
-  -moz-box-shadow: 0 0 5px #000, -1px 0 2px #eee inset;
+  box-shadow: 0 0 5px #000, -1px 0 2px #eee inset;
   overflow: hidden;
   float: left;
   width: 85%;
   height: 100%;
   background: -moz-linear-gradient(left, rgba(250,250,250,0.60), #777);
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(250,250,250,0.60)), to(#777));
 }
 #sidebarContent .sidebarTitle {
   color: #333;
@@ -17,7 +18,9 @@
   margin: 20px auto 0 auto;
   padding: 5px 20px;
   background: -moz-linear-gradient(top, rgba(250,250,250,0.60), rgba(250,250,250,0.20));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(250,250,250,0.60)), to(rgba(250,250,250,0.20)));
   -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
   border-bottom: solid 1px rgba(50,50,50,0.70);
 }
 #sidebarContent .sidebarTitle a {
@@ -30,8 +33,10 @@
   list-style-type: none;
   border-bottom: solid 1px rgba(50,50,50,0.70);
   -moz-border-radius-bottomleft: 50px;
-  -moz-box-shadow: 0 10px 10px rgba(50,50,50,0.20);
+  -webkit-border-bottom-left-radius: 50px;
+  box-shadow: 0 10px 10px rgba(50,50,50,0.20);
   background: -moz-linear-gradient(top, rgba(250,250,250,0.60), rgba(250,250,250,0.20));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(250,250,250,0.60)), to(rgba(250,250,250,0.20)));
   padding: 4px 35px;
   margin: 0;
   text-shadow: 0 1px 1px #fff;
@@ -39,6 +44,7 @@
 #sidebarContent .month:hover,
 #sidebarContent .category:hover {
   background: -moz-linear-gradient(top, rgba(250,250,250,0.50), rgba(250,250,250,0.60));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(250,250,250,0.50)), to(rgba(250,250,250,0.60)));
 }
 #sidebarContent .month a,
 #sidebarContent .category a {
@@ -55,6 +61,7 @@
   text-align: right;
   padding-right: 15px;
   background: -moz-linear-gradient(left, rgba(250,250,250,0.00), rgba(50,50,50,0.30));
+  background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(250,250,250,0.00)), to(rgba(50,50,50,0.30)));
 }
 #sidebarContent .archieves,
 #sidebarContent .categories {
@@ -63,8 +70,10 @@
   padding-bottom: 20px;
   border-left: solid 1px rgba(100,100,100,0.30);
   -moz-border-radius-bottomleft: 20px;
+  -webkit-border-bottom-left-radius: 20px;
   -moz-border-radius-topleft: 5px;
-  -moz-box-shadow: -2px 5px 5px #777;
+  -webkit-border-top-left-radius: 5px;
+  box-shadow: -2px 5px 5px #777;
 }
 #sidebarButton {
   float: left;
@@ -73,7 +82,8 @@
   height: 50px;
   width: 20px;
   -moz-border-radius-bottomleft: 20px;
-  -moz-box-shadow: 0 0 5px #000;
+  -webkit-border-bottom-left-radius: 20px;
+  box-shadow: 0 0 5px #000;
   font-weight: bold;
 }
 #sidebarButton:hover {
