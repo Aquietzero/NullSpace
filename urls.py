@@ -1,5 +1,4 @@
-#from django.conf.urls.defaults import patterns, include, url
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import patterns, include, url
 from NullSpace import settings
 from NullSpace.blogs.views import *
 
@@ -20,6 +19,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     (r'^index/$', index),
     (r'^index/archieve$', archieve),
+    (r'^index/about$', about),
     (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)$', post),
     (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)next$', nextPost),
     (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)prev$', prevPost),
