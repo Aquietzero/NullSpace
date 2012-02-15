@@ -6,9 +6,8 @@
 
 .codehilitetable {
   border-collapse: collapse;
-  border: none;
+  border: solid 1px #ccc;
   margin: 5px auto;
-  border: solid 1px #bbb;
 }
 .codehilitetable .code {
   background-color: #efefef;
@@ -71,8 +70,8 @@
 .w { color: #bbbbbb } /* Text.Whitespace */
 .mf { color: #0000DD; font-weight: bold } /* Literal.Number.Float */
 .mh { color: #0000DD; font-weight: bold } /* Literal.Number.Hex */
-.mi { color: #0000DD; font-weight: bold } /* Literal.Number.Integer */
-.mo { color: #0000DD; font-weight: bold } /* Literal.Number.Oct */
+.mi { color: #003366; font-weight: normal } /* Literal.Number.Integer */
+.mo { color: #003366; font-weight: normal } /* Literal.Number.Oct */
 .sb { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Backtick */
 .sc { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Char */
 .sd { color: #dd2200; background-color: #fff0f0 } /* Literal.String.Doc */
