@@ -1,7 +1,7 @@
 # Django settings for NullSpace project.
 import os.path
 
-DEBUG = True
+DEBUG = True 
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (

@@ -1,4 +1,5 @@
-from django.conf.urls.defaults import patterns, include, url
+#from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls.defaults import *
 from NullSpace import settings
 from NullSpace.blogs.views import *
 
