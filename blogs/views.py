@@ -283,4 +283,14 @@ def prevPost(request, slug):
 
 
 def about(request):
-    return render_to_response('about.html')
+
+    blog_list = Blog.objects.order_by('created').reverse()
+    categories = categoriesForIndex(blog_list)
+    tags = tagsForIndex(blog_list)
+    archieve = archieveForIndex(blog_list)
+
+    return render_to_response('about.html', { 
+        'tags'       : tags,
+        'categories' : categories,
+        'archieve':archieve 
+    })

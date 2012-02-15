@@ -27,6 +27,10 @@
   color: #333;
   text-decoration: none;
 }
+#sidebarContent .sidebarTitle a:hover {
+  color: #036;
+  text-shadow: 0 0 1px rgba(0,50,100,0.30);
+}
 #sidebarContent .month,
 #sidebarContent .category {
   font-weight: bold;
@@ -54,6 +58,7 @@
 #sidebarContent .month a:hover,
 #sidebarContent .category a:hover {
   color: #036;
+  text-shadow: 0 0 1px rgba(0,50,100,0.30);
 }
 #sidebarContent .year {
   font-weight: bold;

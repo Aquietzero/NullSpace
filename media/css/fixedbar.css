@@ -24,24 +24,15 @@
   margin-left: 15px;
   background: url("/media/img/twitter.png") no-repeat center;
 }
-#fixedbarUp #twitter:hover {
-  background: url("/media/img/twitterHover.png") no-repeat center;
-}
 #fixedbarUp #rss {
   margin-left: 85px;
   margin-top: -45px;
   background: url("/media/img/rss.png") no-repeat center;
 }
-#fixedbarUp #rss:hover {
-  background: url("/media/img/rssHover.png") no-repeat center;
-}
 #fixedbarUp #github {
   margin-left: 145px;
   margin-top: -25px;
   background: url("/media/img/github.png") no-repeat center;
-}
-#fixedbarUp #github:hover {
-  background: url("/media/img/githubHover.png") no-repeat center;
 }
 #fixedbarUp #gmail {
   margin-left: 165px;
