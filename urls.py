@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     #url(r'^admin/blogs/blog/add/$', 'NullSpace.blogs.admin_views.add_blog'),
     url(r'^admin/', include(admin.site.urls)),
+    (r'^$', index),
     (r'^index/$', index),
     (r'^index/archieve$', archieve),
     (r'^index/about$', about),
