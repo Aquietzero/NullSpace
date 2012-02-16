@@ -16,13 +16,15 @@
   overflow: hidden;
   -moz-border-radius-bottomright: 30px;
   -webkit-border-bottom-right-radius: 30px;
-  background-color: #f6f6f6;
+  background-color: #eee;
+  min-height: 75px;
+  max-height: 75px;
 }
 .post .postHeading .postTitle {
   float: left;
   width: 80%;
   padding: 15px 20px;
-  text-shadow: 0 1px 2px #999;
+  text-shadow: 0 2px 2px #fff;
 }
 .post .postHeading .postTitle a {
   display: block;
@@ -33,7 +35,7 @@
 }
 .post .postHeading .postTitle a:hover {
   color: #036;
-  text-shadow: 0 0 1px #036;
+  text-shadow: 0 2px 2px #fff;
 }
 .post .postHeading .postTime {
   font-family: sansSerifFont;
