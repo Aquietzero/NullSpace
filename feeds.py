@@ -17,5 +17,5 @@ class ArchiveFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return 'hello'
+        return ''
 
