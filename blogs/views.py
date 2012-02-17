@@ -174,7 +174,7 @@ def post(request, slug):
 
     referer = request.META['HTTP_REFERER'].split('/')[-2]
 
-    if referer == 'index' and request.POST:
+    if (referer == 'index' or referer == request.get_host()) and request.POST:
         return HttpResponseRedirect('/index/')
     else:
         return render_to_response('post_solo.html', { 
