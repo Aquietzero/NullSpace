@@ -1,5 +1,6 @@
 from django.contrib.syndication.views import Feed
 from NullSpace.blogs.models import Blog 
+import markdown
 
 class ArchiveFeed(Feed):
 
@@ -8,7 +9,7 @@ class ArchiveFeed(Feed):
     description = "NullSpace's latest posts."
 
     def items(self):
-        return Blog.objects.order_by('created').reverse()[:5]
+        return Blog.objects.all()
 
     def item_link(self, item):
         return '/post/' + item.slug
@@ -17,5 +18,12 @@ class ArchiveFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return ''
+        return markdown.markdown(truncateWords(item.body, 300, '...'))
+
+
+def truncateWords(content, length=200, sufix='...'):
+    if len(content) < length:
+        return content
+    else:
+        return ''.join(content[:length]) + sufix
 

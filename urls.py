@@ -33,5 +33,5 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
-    (r'^feed/archive/$', ArchiveFeed()),        
+    (r'^feed/latest/$', ArchiveFeed()),        
 )
