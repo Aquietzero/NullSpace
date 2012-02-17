@@ -226,7 +226,7 @@ def archieve(request):
     tags = tagsForIndex(blog_list)
     archieve = archieveForIndex(blog_list)
 
-    return render_to_response('archieve.html', { 
+    return render_to_response('archive.html', { 
         'tags'       : tags,
         'categories' : categories,
         'archieve':archieve 

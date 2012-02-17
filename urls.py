@@ -1,6 +1,8 @@
-from django.conf.urls.defaults import patterns, include, url
+#from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls.defaults import *
 from NullSpace import settings
 from NullSpace.blogs.views import *
+from NullSpace.feeds import ArchiveFeed
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -19,13 +21,17 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     (r'^$', index),
     (r'^index/$', index),
-    (r'^index/archieve$', archieve),
-    (r'^index/about$', about),
-    (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)$', post),
-    (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)next$', nextPost),
-    (r'^index/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)prev$', prevPost),
-    (r'^index/category/(?P<category>\w+)$', postsForCategory),
-    (r'^index/created/(?P<year>\d{4})/(?P<month>\w*)$', postsForCreated),
-    (r'^index/tags/(?P<tagName>\w+)$', postsForTag),
+    (r'^archive/$', archieve),
+    (r'^about/$', about),
+    (r'^post/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)$', post),
+    (r'^post/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)next$', nextPost),
+    (r'^post/(?P<slug>[\w-]*/\d{4}-\d{2}-\d{2}/)prev$', prevPost),
+    (r'^category/(?P<category>\w+)$', postsForCategory),
+    (r'^created/(?P<year>\d{4})/(?P<month>\w*)$', postsForCreated),
+    (r'^tags/(?P<tagName>\w+)$', postsForTag),
     (r'^media/(?P<path>.*)$', 'django.views.static.serve', { 'document_root':settings.MEDIA_ROOT }),
+)
+
+urlpatterns += patterns('',
+    (r'^feed/archive/$', ArchiveFeed()),        
 )

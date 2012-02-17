@@ -4,13 +4,13 @@
 
 <div id="sidebarContent">
   <div id="archieves">
-    <h3 class="sidebarTitle"><a href="/index/archieve">Archieve</a></h3>
+    <h3 class="sidebarTitle"><a href="/archive">Archive</a></h3>
     {% for year in archieve %}
     <ul class="archieves">
       <li class="year">{{ year.year }}</li>
       {% for month in year.months %}
       <li class="month">
-        <a href="/index/created/{{ year.year }}/{{ month.month }}">
+        <a href="/created/{{ year.year }}/{{ month.month }}">
           {{ month.month }}({{ month.blogs|length }})
         </a>
       </li>
@@ -24,7 +24,7 @@
     <ul class="categories">
       {% for category in categories %}
       <li class="category">
-        <a href="/index/category/{{ category.name }}">{{ category.name }}({{ category.size }})</a>
+        <a href="/category/{{ category.name }}">{{ category.name }}({{ category.size }})</a>
       </li>
       {% endfor %}
     </ul>
