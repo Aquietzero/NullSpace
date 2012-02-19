@@ -49,7 +49,7 @@ class Blog(models.Model):
 class Comment(models.Model):
     content = models.TextField()
     email = models.EmailField()
-    website = models.URLField()
+    website = models.URLField(blank=True)
     gravatar = models.URLField(blank=True)
     visitor = models.CharField(max_length = 50)
     created = models.DateTimeField()

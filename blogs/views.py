@@ -83,7 +83,7 @@ def postsForCreated(request, year, month):
 
 def postsForTag(request, tagName):
 
-    posts = Blog.objects.all()
+    posts = Blog.objects.order_by('created').reverse()
     blog_list = []
 
     for post in posts:

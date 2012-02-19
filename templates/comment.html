@@ -18,20 +18,20 @@
   <form action="/post/{{ post.slug }}" method="post">
     <p>
       <label for="id_visitor">Visitor</label> 
-      <input id="id_visitor" type="text" name="visitor" maxlength="50" />
+      <input class="visitor" type="text" name="visitor" maxlength="50" />
     </p>
     <p>
       <label for="id_website">Website</label> 
-      <input type="text" name="website" id="id_website" />
+      <input type="text" name="website" class="website" />
     </p>
     <p>
       <label for="id_email">Email</label> 
-      <input type="text" name="email" id="id_email" />
+      <input type="text" name="email" class="email" />
     </p>
     <p>
       <div class="commentField">
         <textarea id="id_content" rows="10" cols="40" name="content"></textarea>
-        <input type="submit" value="Submit" />
+        <input id="commentSubmit" type="submit" value="Submit" />
       </div>
     </p>
   </form>

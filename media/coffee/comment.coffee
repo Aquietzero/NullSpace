@@ -6,3 +6,4 @@ $ ->
       .next('.leaveComment')
       .slideToggle()
   )
+

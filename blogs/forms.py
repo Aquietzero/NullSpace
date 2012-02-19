@@ -12,4 +12,8 @@ class CommentForm(forms.Form):
         # use re to examine visitor.
         # if something wrong:
         #     raise forms.ValidationError('error')
+
+        if len(visitor) == 0:
+            raise form.ValidateError("Please at least leave a name")
+
         return visitor
