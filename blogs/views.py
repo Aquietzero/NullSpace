@@ -45,7 +45,7 @@ def postsPagination(request, blog_list):
 
 def postsForCategory(request, category):
 
-    blog_list = Blog.objects.filter(category__name=category)
+    blog_list = Blog.objects.filter(category__name=category).order_by('created').reverse()
     all_blogs = Blog.objects.all()
 
     blogs = postsPagination(request, blog_list)
