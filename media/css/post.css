@@ -81,6 +81,7 @@
 }
 .post .postBody p {
   line-height: 140%;
+  vertical-align: middle;
 }
 .post .postBody h1,
 .post .postBody h2,
@@ -88,6 +89,7 @@
 .post .postBody h4 {
   color: #111;
   text-shadow: 0 1px 1px #999;
+  font-weight: bold;
 }
 .post .postBody h5,
 .post .postBody h6,
@@ -95,11 +97,12 @@
   color: #333;
 }
 .post .postBody code {
-  border: solid 1px #bbb;
+  border: solid 1px #ddd;
   font-size: 0.8em;
   background-color: rgba(255,255,255,0.40);
-  padding: 1.5px;
+  padding: 1px 3px;
   color: #044;
+  vertical-align: middle;
 }
 .post .postBody a {
   text-decoration: none;
@@ -127,6 +130,11 @@
   border: solid 1px #ccc;
   padding: 5px;
   margin: 0 auto;
+}
+.post .postBody ul,
+.post .postBody ol {
+  line-height: 130%;
+  color: #333;
 }
 .post .postTags {
   font-family: sansSerifFont;
